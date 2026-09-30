@@ -1,0 +1,6686 @@
+{
+  "version": "0.1.0",
+  "schema": "iris-cognitive-unit-store/v0.1",
+  "source": "iris_full_backup_2026-09-21.json",
+  "rules": "IRIS_Memory_Cognitive_Unit_清洗规范_v0.1.md",
+  "batch": {
+    "batch": "07",
+    "entryStart": 601,
+    "entryEnd": 700,
+    "rawMemoryCount": 100,
+    "derivedUnitCount": 178,
+    "statusCounts": {
+      "CLEAN": 168,
+      "SUBJECTLESS": 10,
+      "UNRESOLVED_REFERENCE": 0,
+      "AMBIGUOUS": 0,
+      "MIXED_SPLIT": 0,
+      "DUPLICATE_CANDIDATE": 0,
+      "CONFLICT_CANDIDATE": 0,
+      "REJECTED": 0
+    },
+    "needsReviewCount": 10
+  },
+  "units": [
+    {
+      "id": "cu:a60822f3001eb1c14a0ede61",
+      "type": "FACT",
+      "text": "清涧的父亲一只眼睛近视度数很高",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_24bbdc3c8f57"
+        ],
+        "sourceTexts": [
+          "清涧的父亲一只眼睛近视度数很高，另一只眼睛几乎没有度数。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "SUBJECTLESS",
+        "confidence": 0.62,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:d793e4846f57b2864bf085e2",
+      "type": "STATE",
+      "text": "另一只眼睛几乎没有度数",
+      "subjects": [
+        {
+          "text": "另一只眼睛几乎没"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_24bbdc3c8f57"
+        ],
+        "sourceTexts": [
+          "清涧的父亲一只眼睛近视度数很高，另一只眼睛几乎没有度数。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:8eca33eb2ce4c46034467db1",
+      "type": "PREFERENCE",
+      "text": "171288708喜欢《明日方舟》中的EW、浊蒂和黍",
+      "subjects": [
+        {
+          "text": "171288708"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_8de6e97650ce"
+        ],
+        "sourceTexts": [
+          "171288708喜欢《明日方舟》中的EW、浊蒂和黍"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:1ada9167af92874c15fdeed7",
+      "type": "GOAL",
+      "text": "1052363266计划暑假住在徐汇",
+      "subjects": [
+        {
+          "text": "1052363266计划暑假"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_fbabce539b7a"
+        ],
+        "sourceTexts": [
+          "1052363266计划暑假住在徐汇"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:2d604d023434b755aac0a617",
+      "type": "FACT",
+      "text": "2091491577拥有尼康Z72、24-200mm镜头和35mm f/1.4镜头，并随身携带摄影及清洁用品",
+      "subjects": [
+        {
+          "text": "2091491577拥"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_965c03be8e01"
+        ],
+        "sourceTexts": [
+          "2091491577拥有尼康Z72、24-200mm镜头和35mm f/1.4镜头，并随身携带摄影及清洁用品"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:e29c255ae5401cfd2a1bb040",
+      "type": "PREFERENCE",
+      "text": "2091491577不喜欢频繁出门",
+      "subjects": [
+        {
+          "text": "2091491577"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_90f64c823537"
+        ],
+        "sourceTexts": [
+          "2091491577不喜欢频繁出门，倾向于在宿舍自己做饭并减少下楼"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:2e3ad44a31509bdc7cb63794",
+      "type": "FACT",
+      "text": "倾向于在宿舍自己做饭并减少下楼",
+      "subjects": [
+        {
+          "text": "倾向于"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_90f64c823537"
+        ],
+        "sourceTexts": [
+          "2091491577不喜欢频繁出门，倾向于在宿舍自己做饭并减少下楼"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:0e76ab33cfea693991763e28",
+      "type": "FACT",
+      "text": "3332628631愿意将公共课教材和多套有机化学旧书转赠给他人",
+      "subjects": [
+        {
+          "text": "3332628631愿意将公共课教材和多套"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6432aa08656a"
+        ],
+        "sourceTexts": [
+          "3332628631愿意将公共课教材和多套有机化学旧书转赠给他人"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:2757470096c6024cff4b663a",
+      "type": "PREFERENCE",
+      "text": "2960945437自称是邦批，喜欢《BanG Dream",
+      "subjects": [
+        {
+          "text": "2960945437自称"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_ac29dba242be"
+        ],
+        "sourceTexts": [
+          "2960945437自称是邦批，喜欢《BanG Dream!》相关内容"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:c7a58b12d8bdec067138e61b",
+      "type": "FACT",
+      "text": "2960945437自称》相关内容",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_ac29dba242be"
+        ],
+        "sourceTexts": [
+          "2960945437自称是邦批，喜欢《BanG Dream!》相关内容"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:c164ec914fca1f3ec698d64c",
+      "type": "FACT",
+      "text": "2693346766阅读的本子类型较为广泛，包括百合、BG、GB和BL",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5efdfef2f1f2"
+        ],
+        "sourceTexts": [
+          "2693346766阅读的本子类型较为广泛，包括百合、BG、GB和BL"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:bab83c56114d46f135ed89c8",
+      "type": "GOAL",
+      "text": "2693346766正在准备包含八门科目的法考",
+      "subjects": [
+        {
+          "text": "2693346766正"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_83d8a07fb09b"
+        ],
+        "sourceTexts": [
+          "2693346766正在准备包含八门科目的法考"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:c4c26580ee50f603d00af001",
+      "type": "OPINION",
+      "text": "1835221533认为华为手机不好用、容易卡顿发烫且价格昂贵",
+      "subjects": [
+        {
+          "text": "1835221533"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_c06504b27b7a"
+        ],
+        "sourceTexts": [
+          "1835221533认为华为手机不好用、容易卡顿发烫且价格昂贵"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:77cdcc496bd7dc5ff413808a",
+      "type": "PREFERENCE",
+      "text": "1004991812爱好天文摄影",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_da5f4ef7446d"
+        ],
+        "sourceTexts": [
+          "1004991812爱好天文摄影"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:476674cfd14aa41c661194c8",
+      "type": "FACT",
+      "text": "3496983886经常使用“今日老婆”功能抽取虚拟角色",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_cc45e5a33c9a"
+        ],
+        "sourceTexts": [
+          "3496983886经常使用“今日老婆”功能抽取虚拟角色"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:9d66e09127cf725e0c041bac",
+      "type": "FACT",
+      "text": "2710328627在家承担做饭、洗碗、洗衣服和扫地等家务",
+      "subjects": [
+        {
+          "text": "2710328627"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_02faf737def9"
+        ],
+        "sourceTexts": [
+          "2710328627在家承担做饭、洗碗、洗衣服和扫地等家务"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:ce7db0d844983c72766bde5b",
+      "type": "OPINION",
+      "text": "“没想好名字”认为江西小炒",
+      "subjects": [
+        {
+          "text": "“没"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_20d59eeef53f"
+        ],
+        "sourceTexts": [
+          "“没想好名字”认为江西小炒，尤其是木桶饭，非常好吃。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:f779ca1d2316ebd74a1cfcd0",
+      "type": "FACT",
+      "text": "尤其是木桶饭，非常好吃",
+      "subjects": [
+        {
+          "text": "尤其"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_20d59eeef53f"
+        ],
+        "sourceTexts": [
+          "“没想好名字”认为江西小炒，尤其是木桶饭，非常好吃。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:5031f38bc587584db19d01e1",
+      "type": "FACT",
+      "text": "“所有的萝莉控，团结起来",
+      "subjects": [
+        {
+          "text": "“所"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_267146c68bcc"
+        ],
+        "sourceTexts": [
+          "“所有的萝莉控，团结起来!打倒振宇!!”会玩舞萌，目前大致只能应对W35左右的谱面，并表示较难继续提升。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:09d777d4877acbc5bca9ad50",
+      "type": "FACT",
+      "text": "“所打倒振宇",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_267146c68bcc"
+        ],
+        "sourceTexts": [
+          "“所有的萝莉控，团结起来!打倒振宇!!”会玩舞萌，目前大致只能应对W35左右的谱面，并表示较难继续提升。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:46d4e37d302519822558da2c",
+      "type": "FACT",
+      "text": "“所",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_267146c68bcc"
+        ],
+        "sourceTexts": [
+          "“所有的萝莉控，团结起来!打倒振宇!!”会玩舞萌，目前大致只能应对W35左右的谱面，并表示较难继续提升。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:35e1e23a5662c8503309e29b",
+      "type": "STATE",
+      "text": "”会玩舞萌，目前大致只能应对W35左右的谱面，并表示较难继续提升",
+      "subjects": [
+        {
+          "text": "”会"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_267146c68bcc"
+        ],
+        "sourceTexts": [
+          "“所有的萝莉控，团结起来!打倒振宇!!”会玩舞萌，目前大致只能应对W35左右的谱面，并表示较难继续提升。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:ae8c004f09d7b079f79e6839",
+      "type": "FACT",
+      "text": "NICEICK明确表示自己不是萝莉控",
+      "subjects": [
+        {
+          "text": "NICEICK明确表示自己不"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_a5ea6305f067"
+        ],
+        "sourceTexts": [
+          "NICEICK明确表示自己不是萝莉控。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:9f4e883fd5350e22a0401ae0",
+      "type": "PREFERENCE",
+      "text": "NICEICK表示不喜欢角色百合园圣亚，但未说明具体原因",
+      "subjects": [
+        {
+          "text": "NICEICK表示"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_249c6a0f071d"
+        ],
+        "sourceTexts": [
+          "NICEICK表示不喜欢角色百合园圣亚，但未说明具体原因。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:bd8038e8286ef9bef853c186",
+      "type": "FACT",
+      "text": "“如果薄荷是你的左耳”正在进行毕业实习，本学期分批安排实习",
+      "subjects": [
+        {
+          "text": "“如果薄荷"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6f475f531a2f"
+        ],
+        "sourceTexts": [
+          "“如果薄荷是你的左耳”正在进行毕业实习，本学期分批安排实习。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:e50d1f88ba19712d87a42f0b",
+      "type": "PREFERENCE",
+      "text": "Kc喜欢玩音游",
+      "subjects": [
+        {
+          "text": "Kc"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_54b443962011"
+        ],
+        "sourceTexts": [
+          "Kc喜欢玩音游，并认为音游带来纯粹的享受。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:a2e615a6eb1025e404620b2c",
+      "type": "OPINION",
+      "text": "并认为音游带来纯粹的享受",
+      "subjects": [
+        {
+          "text": "并"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_54b443962011"
+        ],
+        "sourceTexts": [
+          "Kc喜欢玩音游，并认为音游带来纯粹的享受。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:88a0eaf005dde62e77f94830",
+      "type": "FACT",
+      "text": "“如果薄荷是你的左耳”曾表示，其母亲曾以考研不成功为由要求其去死",
+      "subjects": [
+        {
+          "text": "“如果薄荷"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_ad13b0d116a5"
+        ],
+        "sourceTexts": [
+          "“如果薄荷是你的左耳”曾表示，其母亲曾以考研不成功为由要求其去死，并在一次严肃谈话后将其推到车流中；因此其担心母亲可能不希望自己活着。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:90cc4f055c9be2dc83d3116f",
+      "type": "FACT",
+      "text": "并在一次严肃谈话后将其推到车流中",
+      "subjects": [
+        {
+          "text": "并"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_ad13b0d116a5"
+        ],
+        "sourceTexts": [
+          "“如果薄荷是你的左耳”曾表示，其母亲曾以考研不成功为由要求其去死，并在一次严肃谈话后将其推到车流中；因此其担心母亲可能不希望自己活着。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:56ce8138281f9cd597f68e2c",
+      "type": "GOAL",
+      "text": "因此其担心母亲可能不希望自己活着",
+      "subjects": [
+        {
+          "text": "因此其担心母亲可能不"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_ad13b0d116a5"
+        ],
+        "sourceTexts": [
+          "“如果薄荷是你的左耳”曾表示，其母亲曾以考研不成功为由要求其去死，并在一次严肃谈话后将其推到车流中；因此其担心母亲可能不希望自己活着。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:de9bf3db7d7ab336cff7a3eb",
+      "type": "OPINION",
+      "text": "“如果薄荷是你的左耳”认为自己与母亲的家庭关系矛盾而复杂",
+      "subjects": [
+        {
+          "text": "“如果薄荷"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b1af337a1139"
+        ],
+        "sourceTexts": [
+          "“如果薄荷是你的左耳”认为自己与母亲的家庭关系矛盾而复杂，并且很在意母亲说出的伤害性话语。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:98a8c129eb1af01b89f6d550",
+      "type": "FACT",
+      "text": "很在意母亲说出的伤害性话语",
+      "subjects": [
+        {
+          "text": "很"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b1af337a1139"
+        ],
+        "sourceTexts": [
+          "“如果薄荷是你的左耳”认为自己与母亲的家庭关系矛盾而复杂，并且很在意母亲说出的伤害性话语。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:816cb28f452e008ac5a10bb5",
+      "type": "STATE",
+      "text": "NICEICK住在长春亚泰大街附近",
+      "subjects": [
+        {
+          "text": "NICEICK"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_010ebc5ca2d2"
+        ],
+        "sourceTexts": [
+          "NICEICK住在长春亚泰大街附近。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:4fa256335d570b5bbb71ef5e",
+      "type": "STATE",
+      "text": "KC正在考虑转行从事英语教培工作，尽管其并非英语师范专业",
+      "subjects": [
+        {
+          "text": "KC正"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6542f7153d7b"
+        ],
+        "sourceTexts": [
+          "KC正在考虑转行从事英语教培工作，尽管其并非英语师范专业。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:4ed3e3f6aa15cb1505a8d3ce",
+      "type": "GOAL",
+      "text": "NICEICK会玩《世界计划》（PJSK）",
+      "subjects": [
+        {
+          "text": "NICEICK会"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5721a629a477"
+        ],
+        "sourceTexts": [
+          "NICEICK会玩《世界计划》（PJSK），并邀请Kc一起玩日服。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:ac94787c71ece4bf53e7f7f7",
+      "type": "FACT",
+      "text": "并邀请Kc一起玩日服",
+      "subjects": [
+        {
+          "text": "并邀请Kc一起"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5721a629a477"
+        ],
+        "sourceTexts": [
+          "NICEICK会玩《世界计划》（PJSK），并邀请Kc一起玩日服。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:b3a7997239f45263c6e32684",
+      "type": "GOAL",
+      "text": "NICEICK认为《世界计划》日服的卡面很出色",
+      "subjects": [
+        {
+          "text": "NICEICK"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_02424c9e865b"
+        ],
+        "sourceTexts": [
+          "NICEICK认为《世界计划》日服的卡面很出色，并有抽卡意愿。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:8b2715ad5fcdb16ae0263913",
+      "type": "FACT",
+      "text": "并有抽卡意愿",
+      "subjects": [
+        {
+          "text": "并"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_02424c9e865b"
+        ],
+        "sourceTexts": [
+          "NICEICK认为《世界计划》日服的卡面很出色，并有抽卡意愿。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:7508d414dfbfe46479f3889c",
+      "type": "GOAL",
+      "text": "Kc有游玩《世界计划》（Project Sekai）和舞萌（maimai）的经验",
+      "subjects": [
+        {
+          "text": "Kc"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_1173c14fec15"
+        ],
+        "sourceTexts": [
+          "Kc有游玩《世界计划》（Project Sekai）和舞萌（maimai）的经验。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:6b377bb04afe80d3a7c07b7a",
+      "type": "FACT",
+      "text": "助手将薇欧拉视为本命老婆",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_4e3d0d2770ec"
+        ],
+        "sourceTexts": [
+          "助手将薇欧拉视为本命老婆。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "SUBJECTLESS",
+        "confidence": 0.62,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:304f0b9ceb40bcb30de8bd4e",
+      "type": "FACT",
+      "text": "long_Z对天文摄影图像中的深空天体识别与目标标注感兴趣",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_06fcf22f89e8"
+        ],
+        "sourceTexts": [
+          "long_Z对天文摄影图像中的深空天体识别与目标标注感兴趣"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:ce21983687dcd3c1426bfea0",
+      "type": "STATE",
+      "text": "Kc正在考虑转行从事英语教培工作",
+      "subjects": [
+        {
+          "text": "Kc正"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_9d3e9d66ceda"
+        ],
+        "sourceTexts": [
+          "Kc正在考虑转行从事英语教培工作"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:b5220a56197d17003bddbe7b",
+      "type": "GOAL",
+      "text": "Kc有游玩《世界计划》、舞萌和《明日方舟》的经历",
+      "subjects": [
+        {
+          "text": "Kc"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b025d6ba192b"
+        ],
+        "sourceTexts": [
+          "Kc有游玩《世界计划》、舞萌和《明日方舟》的经历"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:3ebfd4bc9d933f78ae42b7a5",
+      "type": "OPINION",
+      "text": "NICEICK认为尼康NIKKOR Z 58mm f/0.95 S主要是向F卡口58mm f/1.2镜头致敬",
+      "subjects": [
+        {
+          "text": "NICEICK"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_f0dd2593bae4"
+        ],
+        "sourceTexts": [
+          "NICEICK认为尼康NIKKOR Z 58mm f/0.95 S主要是向F卡口58mm f/1.2镜头致敬，而不是以大量销售为目标"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:b0c86b8eb90f6722216607db",
+      "type": "FACT",
+      "text": "而不是以大量销售为目标",
+      "subjects": [
+        {
+          "text": "而不"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_f0dd2593bae4"
+        ],
+        "sourceTexts": [
+          "NICEICK认为尼康NIKKOR Z 58mm f/0.95 S主要是向F卡口58mm f/1.2镜头致敬，而不是以大量销售为目标"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:f5e30401defd312a9b27f98f",
+      "type": "PREFERENCE",
+      "text": "NICEICK重视耳机佩戴的舒适性和稳固性",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_298d60c212a6"
+        ],
+        "sourceTexts": [
+          "NICEICK重视耳机佩戴的舒适性和稳固性"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:5faed4e8bc147250a403cf57",
+      "type": "PREFERENCE",
+      "text": "NICEICK不喜欢拍黑白照片",
+      "subjects": [
+        {
+          "text": "NICEICK"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_c8086103904d"
+        ],
+        "sourceTexts": [
+          "NICEICK不喜欢拍黑白照片"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:964bd011163776a58f2595b3",
+      "type": "PROCEDURE",
+      "text": "苦雪阅读论文时通常采用先翻译、再总结的方式",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_2148ce995f93"
+        ],
+        "sourceTexts": [
+          "苦雪阅读论文时通常采用先翻译、再总结的方式。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "SUBJECTLESS",
+        "confidence": 0.62,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:5e5ca5eca865e01152ececcb",
+      "type": "IDENTITY_CLAIM",
+      "text": "苦雪使用两个QQ账号",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_93b794576184"
+        ],
+        "sourceTexts": [
+          "苦雪使用两个QQ账号，并且每天都会登录。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "SUBJECTLESS",
+        "confidence": 0.62,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:e565b5a59522202a7ee4db18",
+      "type": "FACT",
+      "text": "每天都会登录",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_93b794576184"
+        ],
+        "sourceTexts": [
+          "苦雪使用两个QQ账号，并且每天都会登录。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "SUBJECTLESS",
+        "confidence": 0.62,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:90f6c64cc1304b242ebd5564",
+      "type": "FACT",
+      "text": "苦雪玩《明日方舟》和《终末地》",
+      "subjects": [
+        {
+          "text": "苦雪"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_818a24713d42"
+        ],
+        "sourceTexts": [
+          "苦雪玩《明日方舟》和《终末地》。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:a74233239e1f75156bd6c34d",
+      "type": "IDENTITY_CLAIM",
+      "text": "苦雪的《明日方舟》账号不是B服",
+      "subjects": [
+        {
+          "text": "苦雪的《明日方舟》账号不"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_ca38106bd63f"
+        ],
+        "sourceTexts": [
+          "苦雪的《明日方舟》账号不是B服。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:24d7d8860dad875a17880e66",
+      "type": "GOAL",
+      "text": "星辰主要使用冰、电属性队伍，不太打物理属性，计划等提弗洛斯后尝试自然属性队伍",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_9a58a124e4ba"
+        ],
+        "sourceTexts": [
+          "星辰主要使用冰、电属性队伍，不太打物理属性，计划等提弗洛斯后尝试自然属性队伍。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:8995f96876525fb5c983f722",
+      "type": "GOAL",
+      "text": "苦雪计划在大号抽取提弗洛斯，小号暂不抽",
+      "subjects": [
+        {
+          "text": "苦雪计划"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_abdd2c45c371"
+        ],
+        "sourceTexts": [
+          "苦雪计划在大号抽取提弗洛斯，小号暂不抽，并希望为其攒满潜能。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:6553d6f0a84e0531dc14824e",
+      "type": "GOAL",
+      "text": "并希望为其攒满潜能",
+      "subjects": [
+        {
+          "text": "并"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_abdd2c45c371"
+        ],
+        "sourceTexts": [
+          "苦雪计划在大号抽取提弗洛斯，小号暂不抽，并希望为其攒满潜能。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:d3ab156bb6b149b3f8476b6a",
+      "type": "IDENTITY_CLAIM",
+      "text": "苦雪的大号没有抽汤汤，两个账号都抽取了弥弗",
+      "subjects": [
+        {
+          "text": "苦雪的大号没"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_3a9e4027aff8"
+        ],
+        "sourceTexts": [
+          "苦雪的大号没有抽汤汤，两个账号都抽取了弥弗；小号主要打物理属性。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:e90221a29eef38ff340be68b",
+      "type": "FACT",
+      "text": "苦雪的大号没小号主要打物理属性",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_3a9e4027aff8"
+        ],
+        "sourceTexts": [
+          "苦雪的大号没有抽汤汤，两个账号都抽取了弥弗；小号主要打物理属性。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "SUBJECTLESS",
+        "confidence": 0.62,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:6568d359eedff04a76952f65",
+      "type": "FACT",
+      "text": "有咲不登校已抽齐当前关注的角色",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b9307d5fa551"
+        ],
+        "sourceTexts": [
+          "有咲不登校已抽齐当前关注的角色，拥有电、火、物理三种队伍，暂时没有强度焦虑。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:8e21bdf3543e04c20cab7327",
+      "type": "FACT",
+      "text": "拥有电、火、物理三种队伍",
+      "subjects": [
+        {
+          "text": "拥"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b9307d5fa551"
+        ],
+        "sourceTexts": [
+          "有咲不登校已抽齐当前关注的角色，拥有电、火、物理三种队伍，暂时没有强度焦虑。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:a9859046d651606d031ec037",
+      "type": "STATE",
+      "text": "暂时没有强度焦虑",
+      "subjects": [
+        {
+          "text": "暂时没"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b9307d5fa551"
+        ],
+        "sourceTexts": [
+          "有咲不登校已抽齐当前关注的角色，拥有电、火、物理三种队伍，暂时没有强度焦虑。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:bc4d6a4dc5ba8672d07c0c2c",
+      "type": "OPINION",
+      "text": "有咲不登校认为弥弗、洛茜、汤汤三人组成的队伍实用",
+      "subjects": [
+        {
+          "text": "有咲不登校"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_df3ae8091177"
+        ],
+        "sourceTexts": [
+          "有咲不登校认为弥弗、洛茜、汤汤三人组成的队伍实用。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:7f4ec5b475d638f9ec4341d4",
+      "type": "STATE",
+      "text": "苦雪居住在上床下桌的环境中",
+      "subjects": [
+        {
+          "text": "苦雪居"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_4466c6d9ca23"
+        ],
+        "sourceTexts": [
+          "苦雪居住在上床下桌的环境中，没有床底或柜顶可用于收纳显示器包装盒。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:1160a385721c1ccd8c9f0f8f",
+      "type": "STATE",
+      "text": "没有床底或柜顶可用于收纳显示器包装盒",
+      "subjects": [
+        {
+          "text": "没"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_4466c6d9ca23"
+        ],
+        "sourceTexts": [
+          "苦雪居住在上床下桌的环境中，没有床底或柜顶可用于收纳显示器包装盒。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:9bd5db7b1cacca5a9f461164",
+      "type": "STATE",
+      "text": "苦雪玩游戏时没有明显的强度焦虑",
+      "subjects": [
+        {
+          "text": "苦雪"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_30cdc7c3a402"
+        ],
+        "sourceTexts": [
+          "苦雪玩游戏时没有明显的强度焦虑，倾向于攒抽卡资源而不是为了强度立即抽取角色。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:e17ffcf6ffc47fa1168c3de7",
+      "type": "FACT",
+      "text": "倾向于攒抽卡资源而不是为了强度立即抽取角色",
+      "subjects": [
+        {
+          "text": "倾向于攒抽卡资源而不"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_30cdc7c3a402"
+        ],
+        "sourceTexts": [
+          "苦雪玩游戏时没有明显的强度焦虑，倾向于攒抽卡资源而不是为了强度立即抽取角色。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:4a7817080baba48b3cbfcce7",
+      "type": "FACT",
+      "text": "苦雪 | MacOS享受者玩《原神》和《明日方舟》",
+      "subjects": [
+        {
+          "text": "苦雪 | MacOS享受者"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_3ff6f39039bb"
+        ],
+        "sourceTexts": [
+          "苦雪 | MacOS享受者玩《原神》和《明日方舟》。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:b6d8288f15650e88324ac79d",
+      "type": "GOAL",
+      "text": "苦雪 | MacOS享受者希望添加《原神》实力较强的玩家为好友",
+      "subjects": [
+        {
+          "text": "苦雪 | MacOS享受者"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_89baa2b19152"
+        ],
+        "sourceTexts": [
+          "苦雪 | MacOS享受者希望添加《原神》实力较强的玩家为好友。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:9060a15d7a4402fd7744af98",
+      "type": "FACT",
+      "text": "苦雪 | MacOS享受者在使用胶卷拍摄，并倾向于攒几卷后一起邮寄冲洗、扫描，以分摊运费",
+      "subjects": [
+        {
+          "text": "苦雪 | MacOS享受者"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_adf3fc55223b"
+        ],
+        "sourceTexts": [
+          "苦雪 | MacOS享受者在使用胶卷拍摄，并倾向于攒几卷后一起邮寄冲洗、扫描，以分摊运费。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:62b08ad2462225007d5fa987",
+      "type": "FACT",
+      "text": "舞使用的胶卷冲洗店可以代存胶卷三个月，并支持线下领取或寄回",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_3dde134e8426"
+        ],
+        "sourceTexts": [
+          "舞使用的胶卷冲洗店可以代存胶卷三个月，并支持线下领取或寄回。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:a137b66a7f466843347f6443",
+      "type": "FACT",
+      "text": "“你们在说什么啊",
+      "subjects": [
+        {
+          "text": "“你们"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_073ad62eae82"
+        ],
+        "sourceTexts": [
+          "“你们在说什么啊，看得我一个女大学生羞死了”会制作拼豆，曾纯手工完成过没有图纸的作品。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:3c455699eca16ace94c3ace2",
+      "type": "FACT",
+      "text": "“你们看得我一个女大学生羞死了”会制作拼豆",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_073ad62eae82"
+        ],
+        "sourceTexts": [
+          "“你们在说什么啊，看得我一个女大学生羞死了”会制作拼豆，曾纯手工完成过没有图纸的作品。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:53c2ca0162c4062c49f41cec",
+      "type": "EVENT",
+      "text": "曾纯手工完成过没有图纸的作品",
+      "subjects": [
+        {
+          "text": "曾纯手工完成过没"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_073ad62eae82"
+        ],
+        "sourceTexts": [
+          "“你们在说什么啊，看得我一个女大学生羞死了”会制作拼豆，曾纯手工完成过没有图纸的作品。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:7734b989ae80b9f2644e836b",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_281104cc8271"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!认为鼠标加速度用于办公比较舒服，但打游戏时会关闭。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:e5008652dbf420911aaf3e8f",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_281104cc8271"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!认为鼠标加速度用于办公比较舒服，但打游戏时会关闭。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:63bc366106e66b394357dc72",
+      "type": "FACT",
+      "text": "!?🐖🐖?!🐖🐖",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_281104cc8271"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!认为鼠标加速度用于办公比较舒服，但打游戏时会关闭。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:96c73472f5ba24fa3915498f",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_281104cc8271"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!认为鼠标加速度用于办公比较舒服，但打游戏时会关闭。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:7c3cee8fb49cf65b0458ad57",
+      "type": "OPINION",
+      "text": "!?🐖🐖?!认为鼠标加速度用于办公比较舒服，但打游戏时会关闭",
+      "subjects": [
+        {
+          "text": "!?🐖🐖?!"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_281104cc8271"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!认为鼠标加速度用于办公比较舒服，但打游戏时会关闭。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:4af194194cfb4d2a14c8305a",
+      "type": "FACT",
+      "text": "苦雪 | MacOS享受者不习惯鼠标和触控板的加速度",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_693ad63ddbec"
+        ],
+        "sourceTexts": [
+          "苦雪 | MacOS享受者不习惯鼠标和触控板的加速度，并使用软件关闭触控板加速度。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:e68d4b0b68917dba011cd4a4",
+      "type": "FACT",
+      "text": "并使用软件关闭触控板加速度",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_693ad63ddbec"
+        ],
+        "sourceTexts": [
+          "苦雪 | MacOS享受者不习惯鼠标和触控板的加速度，并使用软件关闭触控板加速度。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:9ab5fe1415878d66f0ec4467",
+      "type": "FACT",
+      "text": "苦雪｜MacOS享受者在原神中拥有甘雨和琴",
+      "subjects": [
+        {
+          "text": "苦雪｜MacOS享受者"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_84465f9a2043"
+        ],
+        "sourceTexts": [
+          "苦雪｜MacOS享受者在原神中拥有甘雨和琴，并表示甘雨命座溢出两个：一个是在抽申鹤时歪到的，另一个是赠送的。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:561086d5494268615ed5ae3d",
+      "type": "FACT",
+      "text": "苦雪｜MacOS享受者并表示甘雨命座溢出两个：一个是在抽申鹤时歪到的",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_84465f9a2043"
+        ],
+        "sourceTexts": [
+          "苦雪｜MacOS享受者在原神中拥有甘雨和琴，并表示甘雨命座溢出两个：一个是在抽申鹤时歪到的，另一个是赠送的。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "SUBJECTLESS",
+        "confidence": 0.62,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:8992dd85d492dbeeb9636577",
+      "type": "FACT",
+      "text": "另一个是赠送的",
+      "subjects": [
+        {
+          "text": "另一个"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_84465f9a2043"
+        ],
+        "sourceTexts": [
+          "苦雪｜MacOS享受者在原神中拥有甘雨和琴，并表示甘雨命座溢出两个：一个是在抽申鹤时歪到的，另一个是赠送的。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:a98fa5d77e938bae66a158f7",
+      "type": "PREFERENCE",
+      "text": "苦雪喜欢玩《无限暖暖》",
+      "subjects": [
+        {
+          "text": "苦雪"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5683cfc2b66a"
+        ],
+        "sourceTexts": [
+          "苦雪喜欢玩《无限暖暖》，并认为这款游戏很好玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:310b81736657cc41d01f7b49",
+      "type": "OPINION",
+      "text": "并认为这款游戏很好玩",
+      "subjects": [
+        {
+          "text": "并"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5683cfc2b66a"
+        ],
+        "sourceTexts": [
+          "苦雪喜欢玩《无限暖暖》，并认为这款游戏很好玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:fba4c87b5e27a5b5a2a3af02",
+      "type": "PREFERENCE",
+      "text": "苦雪 | MacOS享受者喜欢美少女角色",
+      "subjects": [
+        {
+          "text": "苦雪 | MacOS享受者"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b59760794f49"
+        ],
+        "sourceTexts": [
+          "苦雪 | MacOS享受者喜欢美少女角色。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:e270e6cd6a302c9a7903046a",
+      "type": "PREFERENCE",
+      "text": "不爱记笔记喜欢美少女角色",
+      "subjects": [
+        {
+          "text": "不爱记笔记"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_a94bb580e225"
+        ],
+        "sourceTexts": [
+          "不爱记笔记喜欢美少女角色，也喜欢少御类型角色。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:02cc67517257f80b76e491d1",
+      "type": "PREFERENCE",
+      "text": "也喜欢少御类型角色",
+      "subjects": [
+        {
+          "text": "也"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_a94bb580e225"
+        ],
+        "sourceTexts": [
+          "不爱记笔记喜欢美少女角色，也喜欢少御类型角色。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:5b31cf099ceba2dd686a5b0d",
+      "type": "PREFERENCE",
+      "text": "苦雪 | MacOS享受者更看重游戏中是否有自己喜欢的美少女",
+      "subjects": [
+        {
+          "text": "苦雪 | MacOS享受者更看重游戏中"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6b0f64468aaf"
+        ],
+        "sourceTexts": [
+          "苦雪 | MacOS享受者更看重游戏中是否有自己喜欢的美少女，而不是玩法本身；如果没有喜欢的美少女，可能就不会玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:5643c21a6c983075b1d97b3f",
+      "type": "FACT",
+      "text": "而不是玩法本身",
+      "subjects": [
+        {
+          "text": "而不"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6b0f64468aaf"
+        ],
+        "sourceTexts": [
+          "苦雪 | MacOS享受者更看重游戏中是否有自己喜欢的美少女，而不是玩法本身；如果没有喜欢的美少女，可能就不会玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:5c0b7fa71c2186e67e441e68",
+      "type": "PREFERENCE",
+      "text": "如果没有喜欢的美少女，可能就不会玩",
+      "subjects": [
+        {
+          "text": "如果没"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6b0f64468aaf"
+        ],
+        "sourceTexts": [
+          "苦雪 | MacOS享受者更看重游戏中是否有自己喜欢的美少女，而不是玩法本身；如果没有喜欢的美少女，可能就不会玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:cde6ee252a5354b2b2236cac",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_a2612eb4f5c6"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!喜欢游戏或作品中的福瑞角色，尤其对小火龙这类角色感兴趣。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:61914444fcb71f9a7cabbe9a",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_a2612eb4f5c6"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!喜欢游戏或作品中的福瑞角色，尤其对小火龙这类角色感兴趣。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:5fd62a73a9b67dfb558daf83",
+      "type": "FACT",
+      "text": "!?🐖🐖?!🐖🐖",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_a2612eb4f5c6"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!喜欢游戏或作品中的福瑞角色，尤其对小火龙这类角色感兴趣。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:7f392a8e037bf886540702d9",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_a2612eb4f5c6"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!喜欢游戏或作品中的福瑞角色，尤其对小火龙这类角色感兴趣。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:68508f4c97d41e46126d7bc7",
+      "type": "PREFERENCE",
+      "text": "!?🐖🐖?!喜欢游戏或作品中的福瑞角色，尤其对小火龙这类角色感兴趣",
+      "subjects": [
+        {
+          "text": "!?🐖🐖?!"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_a2612eb4f5c6"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!喜欢游戏或作品中的福瑞角色，尤其对小火龙这类角色感兴趣。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:46ac66bbee8a619e8fe331fe",
+      "type": "PREFERENCE",
+      "text": "小瑾重视并喜欢有感染力、令人感动的游戏剧情",
+      "subjects": [
+        {
+          "text": "小瑾重视并"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b70a3677e915"
+        ],
+        "sourceTexts": [
+          "小瑾重视并喜欢有感染力、令人感动的游戏剧情。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:08ae6b6f69b4db43b4cc792a",
+      "type": "PREFERENCE",
+      "text": "亭雪容易出现3D眩晕，偏好反馈及时的游戏，并自称耐心较低",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_e159e011588e"
+        ],
+        "sourceTexts": [
+          "亭雪容易出现3D眩晕，偏好反馈及时的游戏，并自称耐心较低"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:d6f7a382587f74e4fb24efc8",
+      "type": "FACT",
+      "text": "!?🐖🐖?!对口袋妖怪题材更",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5c3c070fedd5"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!对口袋妖怪题材更有兴趣，尤其喜欢小火龙"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:6b324c5609c9c0b30375da0c",
+      "type": "FACT",
+      "text": "!?🐖🐖?!对口袋妖怪题材更",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5c3c070fedd5"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!对口袋妖怪题材更有兴趣，尤其喜欢小火龙"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:800316ed68a66cc414e69fb0",
+      "type": "FACT",
+      "text": "!?🐖🐖?!对口袋妖怪题材更🐖🐖",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5c3c070fedd5"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!对口袋妖怪题材更有兴趣，尤其喜欢小火龙"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:89f7fe756567a3bc212e233d",
+      "type": "FACT",
+      "text": "!?🐖🐖?!对口袋妖怪题材更",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5c3c070fedd5"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!对口袋妖怪题材更有兴趣，尤其喜欢小火龙"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:cb38c82ef2fda3c3f54f1d4c",
+      "type": "FACT",
+      "text": "对口袋妖怪题材更有兴趣",
+      "subjects": [
+        {
+          "text": "对口袋妖怪题材更"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5c3c070fedd5"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!对口袋妖怪题材更有兴趣，尤其喜欢小火龙"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:4807c4c01436c557c2591cc0",
+      "type": "PREFERENCE",
+      "text": "尤其喜欢小火龙",
+      "subjects": [
+        {
+          "text": "尤其"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5c3c070fedd5"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!对口袋妖怪题材更有兴趣，尤其喜欢小火龙"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:595bf4909eb4407b87a4f0d9",
+      "type": "FACT",
+      "text": "小瑾容易出现3D眩晕",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_d33bd9d37c3e"
+        ],
+        "sourceTexts": [
+          "小瑾容易出现3D眩晕。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:d3a3d1ab76940fc9d498fdcf",
+      "type": "PREFERENCE",
+      "text": "小瑾更喜欢泰拉瑞亚",
+      "subjects": [
+        {
+          "text": "小瑾更"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_bf18dab043b7"
+        ],
+        "sourceTexts": [
+          "小瑾更喜欢泰拉瑞亚。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:f57d3263864bc448107a44d3",
+      "type": "FACT",
+      "text": "小瑾曾经玩过《崩坏3》",
+      "subjects": [
+        {
+          "text": "小瑾曾经"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_16de08524cf8"
+        ],
+        "sourceTexts": [
+          "小瑾曾经玩过《崩坏3》，并喜欢其中的角色爱莉。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:111867313455c56938bb14bd",
+      "type": "PREFERENCE",
+      "text": "并喜欢其中的角色爱莉",
+      "subjects": [
+        {
+          "text": "并"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_16de08524cf8"
+        ],
+        "sourceTexts": [
+          "小瑾曾经玩过《崩坏3》，并喜欢其中的角色爱莉。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:884102de2bc61cb693006a3e",
+      "type": "FACT",
+      "text": "你滴勋宗不怀念《崩坏3》",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_d24b4f6c3aab"
+        ],
+        "sourceTexts": [
+          "你滴勋宗不怀念《崩坏3》，并自称是米哈游的支持者反对者（米黑）。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:56c53ed12bfb9b56b91ce839",
+      "type": "FACT",
+      "text": "并自称是米哈游的支持者反对者（米黑）",
+      "subjects": [
+        {
+          "text": "并自称"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_d24b4f6c3aab"
+        ],
+        "sourceTexts": [
+          "你滴勋宗不怀念《崩坏3》，并自称是米哈游的支持者反对者（米黑）。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:7d85c55d299a7bc6ab5dd4af",
+      "type": "FACT",
+      "text": "苦雪 | MacOS享受者自称是米哈游的支持者反对者（米黑）",
+      "subjects": [
+        {
+          "text": "苦雪 | MacOS享受者自称"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6b316333eb29"
+        ],
+        "sourceTexts": [
+          "苦雪 | MacOS享受者自称是米哈游的支持者反对者（米黑）。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:8c3087bd5c66bcdc77deee8a",
+      "type": "PREFERENCE",
+      "text": "亭雪喜欢有人陪着一起玩游戏",
+      "subjects": [
+        {
+          "text": "亭雪"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_cd8832c2b9a7"
+        ],
+        "sourceTexts": [
+          "亭雪喜欢有人陪着一起玩游戏。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:2e9bab5b222fdbdd0a4649ed",
+      "type": "FACT",
+      "text": "你滴勋宗小时候主要玩奥拉星",
+      "subjects": [
+        {
+          "text": "你滴勋宗小时候主要"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_89ef03345d82"
+        ],
+        "sourceTexts": [
+          "你滴勋宗小时候主要玩奥拉星，并在该游戏中累计充值约3000元。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:aa7f7586df86ad86f7cfc31a",
+      "type": "FACT",
+      "text": "并在该游戏中累计充值约3000元",
+      "subjects": [
+        {
+          "text": "并"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_89ef03345d82"
+        ],
+        "sourceTexts": [
+          "你滴勋宗小时候主要玩奥拉星，并在该游戏中累计充值约3000元。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:02777802296027e039371640",
+      "type": "FACT",
+      "text": "苦雪 | MacOS享受者愿意玩泰拉瑞亚",
+      "subjects": [
+        {
+          "text": "苦雪 | MacOS享受者愿意"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_9c43732296d9"
+        ],
+        "sourceTexts": [
+          "苦雪 | MacOS享受者愿意玩泰拉瑞亚。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:093139c567c36fbe7478753f",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b57a4f4ca17a"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩过洛克王国，也认为茶杯头不错，并提到茶杯头适合双人游玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:4db982199c8a3a0533fbe8f9",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b57a4f4ca17a"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩过洛克王国，也认为茶杯头不错，并提到茶杯头适合双人游玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:0e65a70c0dd39b3394d47834",
+      "type": "FACT",
+      "text": "!?🐖🐖?!🐖🐖",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b57a4f4ca17a"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩过洛克王国，也认为茶杯头不错，并提到茶杯头适合双人游玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:4c6f5b0890d1d144d5073a7a",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b57a4f4ca17a"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩过洛克王国，也认为茶杯头不错，并提到茶杯头适合双人游玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:79e888a14a2dc960e85d2c23",
+      "type": "FACT",
+      "text": "!?🐖🐖?!玩过洛克王国",
+      "subjects": [
+        {
+          "text": "!?🐖🐖?!"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b57a4f4ca17a"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩过洛克王国，也认为茶杯头不错，并提到茶杯头适合双人游玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:f08c7f878d7ad003cdb2bc36",
+      "type": "OPINION",
+      "text": "也认为茶杯头不错",
+      "subjects": [
+        {
+          "text": "也"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b57a4f4ca17a"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩过洛克王国，也认为茶杯头不错，并提到茶杯头适合双人游玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:0670ea2cd3134936af487ad9",
+      "type": "FACT",
+      "text": "并提到茶杯头适合双人游玩",
+      "subjects": [
+        {
+          "text": "并提到茶杯头适合双人游"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_b57a4f4ca17a"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩过洛克王国，也认为茶杯头不错，并提到茶杯头适合双人游玩。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:882f143e52b1327a80519259",
+      "type": "FACT",
+      "text": "苦雪在玩《我的世界》等3D游戏时会轻微晕动，通常需要关闭视角摇晃和奔跑加速效果",
+      "subjects": [
+        {
+          "text": "苦雪"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_dbd0ba774194"
+        ],
+        "sourceTexts": [
+          "苦雪在玩《我的世界》等3D游戏时会轻微晕动，通常需要关闭视角摇晃和奔跑加速效果。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:b446cee855f8e94072f5befa",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_15bd2e55ea59"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩《我的世界》时也会晕3D。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:9bb89afa0e41d81de4b4731d",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_15bd2e55ea59"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩《我的世界》时也会晕3D。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:6f48c17198fb9f03039b94b5",
+      "type": "FACT",
+      "text": "!?🐖🐖?!🐖🐖",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_15bd2e55ea59"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩《我的世界》时也会晕3D。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:b841ef7ce41acc74754c7274",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_15bd2e55ea59"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩《我的世界》时也会晕3D。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:73bb0287f398d02a05f6804e",
+      "type": "FACT",
+      "text": "!?🐖🐖?!玩《我的世界》时也会晕3D",
+      "subjects": [
+        {
+          "text": "!?🐖🐖?!"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_15bd2e55ea59"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!玩《我的世界》时也会晕3D。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:37ca4f45c2feb44a93cc19ed",
+      "type": "FACT",
+      "text": "Rosenrot推荐《怪物猎人》作为适合多人共斗的游戏",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_8f6109192922"
+        ],
+        "sourceTexts": [
+          "Rosenrot推荐《怪物猎人》作为适合多人共斗的游戏。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:478a19ac5f0c2e44c0ecd984",
+      "type": "OPINION",
+      "text": "Rosenrot认为购买游戏应优先考虑 Steampy 或淘宝赠礼",
+      "subjects": [
+        {
+          "text": "Rosenrot"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_aca06fcab49e"
+        ],
+        "sourceTexts": [
+          "Rosenrot认为购买游戏应优先考虑 Steampy 或淘宝赠礼，而不是小黑盒。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:723e8db5a67426afc2623f37",
+      "type": "FACT",
+      "text": "而不是小黑盒",
+      "subjects": [
+        {
+          "text": "而不"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_aca06fcab49e"
+        ],
+        "sourceTexts": [
+          "Rosenrot认为购买游戏应优先考虑 Steampy 或淘宝赠礼，而不是小黑盒。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:29b6cc0a39dbacabaaadb64b",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_9fcf8e0c46f8"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!喜欢风格奇特、非主流的游戏，尤其期待《昭和米国物语》。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:eccb60ebe50652c1a30a96c9",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_9fcf8e0c46f8"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!喜欢风格奇特、非主流的游戏，尤其期待《昭和米国物语》。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:47b09c2a990b50270475de61",
+      "type": "FACT",
+      "text": "!?🐖🐖?!🐖🐖",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_9fcf8e0c46f8"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!喜欢风格奇特、非主流的游戏，尤其期待《昭和米国物语》。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:dc61afc6329d8ca90a3b34fe",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_9fcf8e0c46f8"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!喜欢风格奇特、非主流的游戏，尤其期待《昭和米国物语》。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:bd3ecd3d7ab5af119d7e1b6f",
+      "type": "PREFERENCE",
+      "text": "!?🐖🐖?!喜欢风格奇特、非主流的游戏，尤其期待《昭和米国物语》",
+      "subjects": [
+        {
+          "text": "!?🐖🐖?!"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_9fcf8e0c46f8"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!喜欢风格奇特、非主流的游戏，尤其期待《昭和米国物语》。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:cc6bbe5f273d798f2972284c",
+      "type": "FACT",
+      "text": "你滴勋宗是PC玩家",
+      "subjects": [
+        {
+          "text": "你滴勋宗"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_fb4b56fc830b"
+        ],
+        "sourceTexts": [
+          "你滴勋宗是PC玩家。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:c48b56a695ac9fa23a9a402c",
+      "type": "PREFERENCE",
+      "text": "Rosenrot不喜欢主机锁30帧的体验",
+      "subjects": [
+        {
+          "text": "Rosenrot"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_66f706c03827"
+        ],
+        "sourceTexts": [
+          "Rosenrot不喜欢主机锁30帧的体验，曾在PS4上以1080p/30帧游玩《血源诅咒》并对此感到不适。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:6f730bf62e400637f423c7a2",
+      "type": "FACT",
+      "text": "曾在PS4上以1080p/30帧游玩《血源诅咒》并对此感到不适",
+      "subjects": [
+        {
+          "text": "曾"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_66f706c03827"
+        ],
+        "sourceTexts": [
+          "Rosenrot不喜欢主机锁30帧的体验，曾在PS4上以1080p/30帧游玩《血源诅咒》并对此感到不适。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:b2d929971706683a9b9f4919",
+      "type": "PREFERENCE",
+      "text": "柒糖喜欢《洛克王国》",
+      "subjects": [
+        {
+          "text": "柒糖"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6316a6438b06"
+        ],
+        "sourceTexts": [
+          "柒糖喜欢《洛克王国》，并愿意重新游玩这款童年网游。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:4b86df3a1e0559dd1ed873f1",
+      "type": "FACT",
+      "text": "并愿意重新游玩这款童年网游",
+      "subjects": [
+        {
+          "text": "并愿意重新游"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6316a6438b06"
+        ],
+        "sourceTexts": [
+          "柒糖喜欢《洛克王国》，并愿意重新游玩这款童年网游。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:d7a20e9b051785567d428e3a",
+      "type": "PREFERENCE",
+      "text": "NICEICK不喜欢《蔚蓝档案》角色宇泽玲纱",
+      "subjects": [
+        {
+          "text": "NICEICK"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_d52f7a19fdd4"
+        ],
+        "sourceTexts": [
+          "NICEICK不喜欢《蔚蓝档案》角色宇泽玲纱。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:3252269ab9f4eb1bac4b6b11",
+      "type": "PREFERENCE",
+      "text": "小田曾经喜欢原神角色刻晴，但已称她为“前老婆”",
+      "subjects": [
+        {
+          "text": "小田曾经"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_deda396d6478"
+        ],
+        "sourceTexts": [
+          "小田曾经喜欢原神角色刻晴，但已称她为“前老婆”。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:f483f40ac153432036f53c4d",
+      "type": "PREFERENCE",
+      "text": "小田不喜欢原神角色七七",
+      "subjects": [
+        {
+          "text": "小田"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_9102c12bd6be"
+        ],
+        "sourceTexts": [
+          "小田不喜欢原神角色七七。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:de84e57ec929fc7e510783c5",
+      "type": "EVENT",
+      "text": "小瑾在游戏7.0版本中花两天完成了全探索、全收集，并开了330多个宝箱",
+      "subjects": [
+        {
+          "text": "小瑾"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_98278bee18bd"
+        ],
+        "sourceTexts": [
+          "小瑾在游戏7.0版本中花两天完成了全探索、全收集，并开了330多个宝箱。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:a818f5acd08eb0c1daf58b46",
+      "type": "GOAL",
+      "text": "小田学习或准备报考分析化学专业",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_0e210ea3dce5"
+        ],
+        "sourceTexts": [
+          "小田学习或准备报考分析化学专业。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:4de7a5259a3c271f27e5029e",
+      "type": "FACT",
+      "text": "“你们在说什么啊",
+      "subjects": [
+        {
+          "text": "“你们"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_d903835b326c"
+        ],
+        "sourceTexts": [
+          "“你们在说什么啊，看得我一个女大学生羞死了”目前在分析组做实验工作，每天需要进行数百次CV和DPV测试。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:adfb115b30c9c7303fb43893",
+      "type": "STATE",
+      "text": "看得我一个女大学生羞死了”目前在分析组做实验工作，每天需要进行数百次CV和DPV测试",
+      "subjects": [
+        {
+          "text": "看得我一个女大学生羞死了”目前"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_d903835b326c"
+        ],
+        "sourceTexts": [
+          "“你们在说什么啊，看得我一个女大学生羞死了”目前在分析组做实验工作，每天需要进行数百次CV和DPV测试。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:5a58410616455b6f52437a52",
+      "type": "FACT",
+      "text": "清涧表示",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6a020d6294a8"
+        ],
+        "sourceTexts": [
+          "清涧表示，其父亲不喜欢民俗中规规矩矩、条条框框的做法，因此清涧家较少与老家亲戚联系。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "SUBJECTLESS",
+        "confidence": 0.62,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:6b795b8b91dedfd2504e62b6",
+      "type": "PREFERENCE",
+      "text": "其父亲不喜欢民俗中规规矩矩",
+      "subjects": [
+        {
+          "text": "其父亲"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6a020d6294a8"
+        ],
+        "sourceTexts": [
+          "清涧表示，其父亲不喜欢民俗中规规矩矩、条条框框的做法，因此清涧家较少与老家亲戚联系。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:8150c1879fba302ac72859f3",
+      "type": "FACT",
+      "text": "条条框框的做法，因此清涧家较少与老家亲戚联系",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6a020d6294a8"
+        ],
+        "sourceTexts": [
+          "清涧表示，其父亲不喜欢民俗中规规矩矩、条条框框的做法，因此清涧家较少与老家亲戚联系。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "SUBJECTLESS",
+        "confidence": 0.62,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:f51763285bfaf2efeeffd561",
+      "type": "FACT",
+      "text": "NICEICK会游玩舞萌（maimai）等音乐游戏，也提到过Project SEKAI",
+      "subjects": [
+        {
+          "text": "NICEICK会游"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_734a1b5dc272"
+        ],
+        "sourceTexts": [
+          "NICEICK会游玩舞萌（maimai）等音乐游戏，也提到过Project SEKAI。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:363c2fc02edd624bd5495b2c",
+      "type": "FACT",
+      "text": "NICEICK会玩舞萌",
+      "subjects": [
+        {
+          "text": "NICEICK会"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_a82a00870e4d"
+        ],
+        "sourceTexts": [
+          "NICEICK会玩舞萌。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:aa315500d0914eb7fb17a242",
+      "type": "FACT",
+      "text": "没想好名字表示",
+      "subjects": [
+        {
+          "text": "没"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_74ad244823aa"
+        ],
+        "sourceTexts": [
+          "没想好名字表示，其家族目前只有两家亲戚往来，之前还有一家亲戚因各种问题断绝了联系。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:78b220cb3df57e0f20aad05f",
+      "type": "STATE",
+      "text": "其家族目前只有两家亲戚往来，之前",
+      "subjects": [
+        {
+          "text": "其家族目前只"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_74ad244823aa"
+        ],
+        "sourceTexts": [
+          "没想好名字表示，其家族目前只有两家亲戚往来，之前还有一家亲戚因各种问题断绝了联系。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:cfc34094e97f170017f59a91",
+      "type": "STATE",
+      "text": "没有一家亲戚因各种问题断绝了联系",
+      "subjects": [
+        {
+          "text": "没"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_74ad244823aa"
+        ],
+        "sourceTexts": [
+          "没想好名字表示，其家族目前只有两家亲戚往来，之前还有一家亲戚因各种问题断绝了联系。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:0e966f4510c5d9f1e845f6dc",
+      "type": "EVENT",
+      "text": "KC表示自己不能参加公务员考试",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_10423e1050dc"
+        ],
+        "sourceTexts": [
+          "KC表示自己不能参加公务员考试。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:0660bed34c263fc12375b817",
+      "type": "EVENT",
+      "text": "天文社的线下活动会提供现成的望远镜等设备，参加者带手机来即可参与",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_86a35b6dc72e"
+        ],
+        "sourceTexts": [
+          "天文社的线下活动会提供现成的望远镜等设备，参加者带手机来即可参与。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "SUBJECTLESS",
+        "confidence": 0.62,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:719ead20ce7c3e9d3876b385",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_3a684708856e"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!在奉贤。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:2ddaf5dd12ff13f7d8d86c5c",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_3a684708856e"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!在奉贤。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:64b62cc3e70d0270209aec65",
+      "type": "FACT",
+      "text": "!?🐖🐖?!🐖🐖",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_3a684708856e"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!在奉贤。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:41e351202dc46de4a49ede3b",
+      "type": "FACT",
+      "text": "!?🐖🐖?!",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_3a684708856e"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!在奉贤。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:ba87c3916bd00f98903a755a",
+      "type": "FACT",
+      "text": "!?🐖🐖?!在奉贤",
+      "subjects": [
+        {
+          "text": "!?🐖🐖?!"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_3a684708856e"
+        ],
+        "sourceTexts": [
+          "!?🐖🐖?!在奉贤。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:1f56767fa6fdbbd6eb7ae9d1",
+      "type": "PREFERENCE",
+      "text": "不爱记笔记在奉贤",
+      "subjects": [
+        {
+          "text": "不爱记笔记"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_fb8f3ce95e32"
+        ],
+        "sourceTexts": [
+          "不爱记笔记在奉贤。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:c430bb9e7dc2b26f1bcf1935",
+      "type": "STATE",
+      "text": "该群讨论的社团报名没有数量上限",
+      "subjects": [
+        {
+          "text": "该群讨论的社团报名没"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6f690409970c"
+        ],
+        "sourceTexts": [
+          "该群讨论的社团报名没有数量上限，报名后可以自行选择是否参加活动。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:54e66ee5a307b8bef8d3dc1a",
+      "type": "EVENT",
+      "text": "报名后可以自行选择是否参加活动",
+      "subjects": [
+        {
+          "text": "报名后可以自行选择"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_6f690409970c"
+        ],
+        "sourceTexts": [
+          "该群讨论的社团报名没有数量上限，报名后可以自行选择是否参加活动。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:81da136662879ed6d7734e87",
+      "type": "FACT",
+      "text": "ヤチヨ认同将弗洛伊德概括为关注“压抑了什么”、将拉康概括为关注主体如何被语言塑造的区分",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_c2dfa1d07c9f"
+        ],
+        "sourceTexts": [
+          "ヤチヨ认同将弗洛伊德概括为关注“压抑了什么”、将拉康概括为关注主体如何被语言塑造的区分。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:8e98337dbb29559b066af353",
+      "type": "FACT",
+      "text": "NICEICK表示自己不会演奏任何乐器",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_d20a4ec0c922"
+        ],
+        "sourceTexts": [
+          "NICEICK表示自己不会演奏任何乐器。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:a705da7341820a2fc6e73f74",
+      "type": "PREFERENCE",
+      "text": "宝石喜欢被称为“宝宝”",
+      "subjects": [
+        {
+          "text": "宝石"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_1559fc41ca97"
+        ],
+        "sourceTexts": [
+          "宝石喜欢被称为“宝宝”，不喜欢被称为“石石”。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:2c43216ce872bc7d8165631d",
+      "type": "PREFERENCE",
+      "text": "不喜欢被称为“石石”",
+      "subjects": [
+        {
+          "text": "不"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_1559fc41ca97"
+        ],
+        "sourceTexts": [
+          "宝石喜欢被称为“宝宝”，不喜欢被称为“石石”。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:1713d05e8d30344e562204ad",
+      "type": "FACT",
+      "text": "NICEICK自称2026年8月29日22岁",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_f0cd7b9a6c0d"
+        ],
+        "sourceTexts": [
+          "NICEICK自称2026年8月29日22岁，并表示自己是2004年出生的。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:1eb06086cbf08912fabc52d5",
+      "type": "FACT",
+      "text": "并表示自己是2004年出生的",
+      "subjects": [
+        {
+          "text": "并表示自己"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_f0cd7b9a6c0d"
+        ],
+        "sourceTexts": [
+          "NICEICK自称2026年8月29日22岁，并表示自己是2004年出生的。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:14a7fa6d6430d7cd61d55b76",
+      "type": "FACT",
+      "text": "宇佐见·绣表示自己",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_78154683864d"
+        ],
+        "sourceTexts": [
+          "宇佐见·绣表示自己还未满20岁。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:5f072c8fd820a9c26b8c6edf",
+      "type": "STATE",
+      "text": "未满20岁",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "negative",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_78154683864d"
+        ],
+        "sourceTexts": [
+          "宇佐见·绣表示自己还未满20岁。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:35a70bb8efd2fa7d3adb5462",
+      "type": "PREFERENCE",
+      "text": "NICEICK喜欢《世界计划》及其中的角色星乃一歌",
+      "subjects": [
+        {
+          "text": "NICEICK"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5bf5f6b7f25d"
+        ],
+        "sourceTexts": [
+          "NICEICK喜欢《世界计划》及其中的角色星乃一歌，并期待在9月1日看到星乃一歌的大娃。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:88817eaa35ec01ff738d2423",
+      "type": "FACT",
+      "text": "并期待在9月1日看到星乃一歌的大娃",
+      "subjects": [
+        {
+          "text": "并期待"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_5bf5f6b7f25d"
+        ],
+        "sourceTexts": [
+          "NICEICK喜欢《世界计划》及其中的角色星乃一歌，并期待在9月1日看到星乃一歌的大娃。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:5ae064e144d6e074cebacf66",
+      "type": "GOAL",
+      "text": "NICEICK关注《世界计划》中的Leo/need",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "modal",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_46cfe3953a0c"
+        ],
+        "sourceTexts": [
+          "NICEICK关注《世界计划》中的Leo/need。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:0a2f0a331165802ea3efe179",
+      "type": "FACT",
+      "text": "NICEICK对摇滚音乐及乐队发展史感兴趣",
+      "subjects": [],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_0fbd7f3bbdc9"
+        ],
+        "sourceTexts": [
+          "NICEICK对摇滚音乐及乐队发展史感兴趣，曾讨论汪峰及其乐队在盗版盛行时期的经历。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    },
+    {
+      "id": "cu:704aed585828a33046ac5c05",
+      "type": "FACT",
+      "text": "曾讨论汪峰及其乐队在盗版盛行时期的经历",
+      "subjects": [
+        {
+          "text": "曾讨论汪峰及其乐队"
+        }
+      ],
+      "mentions": [],
+      "semantic": {
+        "predicate": null,
+        "polarity": "positive",
+        "modality": "asserted",
+        "temporal": null
+      },
+      "provenance": {
+        "sourceMemoryIds": [
+          "mem_0fbd7f3bbdc9"
+        ],
+        "sourceTexts": [
+          "NICEICK对摇滚音乐及乐队发展史感兴趣，曾讨论汪峰及其乐队在盗版盛行时期的经历。"
+        ],
+        "sourceSpan": null
+      },
+      "cleaning": {
+        "status": "CLEAN",
+        "confidence": 0.78,
+        "notes": "deterministic conservative per-memory extraction"
+      }
+    }
+  ],
+  "perMemory": [
+    {
+      "memoryId": "mem_24bbdc3c8f57",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 1,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_8de6e97650ce",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_fbabce539b7a",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_965c03be8e01",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_90f64c823537",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_6432aa08656a",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_ac29dba242be",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_5efdfef2f1f2",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_83d8a07fb09b",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_c06504b27b7a",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_da5f4ef7446d",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_cc45e5a33c9a",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_02faf737def9",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_20d59eeef53f",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_267146c68bcc",
+      "unitCount": 4,
+      "statuses": {
+        "CLEAN": 4,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_a5ea6305f067",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_249c6a0f071d",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_6f475f531a2f",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_54b443962011",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_ad13b0d116a5",
+      "unitCount": 3,
+      "statuses": {
+        "CLEAN": 3,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_b1af337a1139",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_010ebc5ca2d2",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_6542f7153d7b",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_5721a629a477",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_02424c9e865b",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_1173c14fec15",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_4e3d0d2770ec",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 0,
+        "SUBJECTLESS": 1,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_06fcf22f89e8",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_9d3e9d66ceda",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_b025d6ba192b",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_f0dd2593bae4",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_298d60c212a6",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_c8086103904d",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_2148ce995f93",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 0,
+        "SUBJECTLESS": 1,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_93b794576184",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 0,
+        "SUBJECTLESS": 2,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_818a24713d42",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_ca38106bd63f",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_9a58a124e4ba",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_abdd2c45c371",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_3a9e4027aff8",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 1,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_b9307d5fa551",
+      "unitCount": 3,
+      "statuses": {
+        "CLEAN": 3,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_df3ae8091177",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_4466c6d9ca23",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_30cdc7c3a402",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_3ff6f39039bb",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_89baa2b19152",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_adf3fc55223b",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_3dde134e8426",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_073ad62eae82",
+      "unitCount": 3,
+      "statuses": {
+        "CLEAN": 3,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_281104cc8271",
+      "unitCount": 5,
+      "statuses": {
+        "CLEAN": 5,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_693ad63ddbec",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_84465f9a2043",
+      "unitCount": 3,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 1,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_5683cfc2b66a",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_b59760794f49",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_a94bb580e225",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_6b0f64468aaf",
+      "unitCount": 3,
+      "statuses": {
+        "CLEAN": 3,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_a2612eb4f5c6",
+      "unitCount": 5,
+      "statuses": {
+        "CLEAN": 5,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_b70a3677e915",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_e159e011588e",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_5c3c070fedd5",
+      "unitCount": 6,
+      "statuses": {
+        "CLEAN": 6,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_d33bd9d37c3e",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_bf18dab043b7",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_16de08524cf8",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_d24b4f6c3aab",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_6b316333eb29",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_cd8832c2b9a7",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_89ef03345d82",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_9c43732296d9",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_b57a4f4ca17a",
+      "unitCount": 7,
+      "statuses": {
+        "CLEAN": 7,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_dbd0ba774194",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_15bd2e55ea59",
+      "unitCount": 5,
+      "statuses": {
+        "CLEAN": 5,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_8f6109192922",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_aca06fcab49e",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_9fcf8e0c46f8",
+      "unitCount": 5,
+      "statuses": {
+        "CLEAN": 5,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_fb4b56fc830b",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_66f706c03827",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_6316a6438b06",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_d52f7a19fdd4",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_deda396d6478",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_9102c12bd6be",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_98278bee18bd",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_0e210ea3dce5",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_d903835b326c",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_6a020d6294a8",
+      "unitCount": 3,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 2,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_734a1b5dc272",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_a82a00870e4d",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_74ad244823aa",
+      "unitCount": 3,
+      "statuses": {
+        "CLEAN": 3,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_10423e1050dc",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_86a35b6dc72e",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 0,
+        "SUBJECTLESS": 1,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_3a684708856e",
+      "unitCount": 5,
+      "statuses": {
+        "CLEAN": 5,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_fb8f3ce95e32",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_6f690409970c",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_c2dfa1d07c9f",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_d20a4ec0c922",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_1559fc41ca97",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_f0cd7b9a6c0d",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_78154683864d",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_5bf5f6b7f25d",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_46cfe3953a0c",
+      "unitCount": 1,
+      "statuses": {
+        "CLEAN": 1,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    },
+    {
+      "memoryId": "mem_0fbd7f3bbdc9",
+      "unitCount": 2,
+      "statuses": {
+        "CLEAN": 2,
+        "SUBJECTLESS": 0,
+        "UNRESOLVED_REFERENCE": 0,
+        "AMBIGUOUS": 0,
+        "MIXED_SPLIT": 0,
+        "DUPLICATE_CANDIDATE": 0,
+        "CONFLICT_CANDIDATE": 0,
+        "REJECTED": 0
+      }
+    }
+  ]
+}

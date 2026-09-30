@@ -1,0 +1,37 @@
+# Nested independent repositories keep their own histories.
+/components/memory-demo/
+/components/xtw-memory-fabric/
+
+# Generated/runtime files and local environments.
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/dist/
+**/.vite/
+*.log
+
+# Private/raw and derived corpus data stay outside Git.
+/memory/raw massage/
+/memory/iris_full_backup_2026-09-21.json
+/memory/clean/
+/memory/judgment/
+/memory/cognitive_units_batches/
+/memory/previews/
+/memory/zips/
+/memory/manifests/
+/memory/benchmarks/
+
+# Large or data-bearing experiment outputs. Keep in the workspace, never in Git.
+/memory/benchmark-results/
+/memory/benchmark-results/model-weights/
+/memory/reports/
+**/*.safetensors
+**/*.pt
+**/*.pth
+**/*.bin
+**/*.jsonl
+
+# Local compatibility-only files.
+.DS_Store

@@ -1,0 +1,2309 @@
+{
+  "version": "0.1.0",
+  "datasetName": "IRIS Associative Memory Seed Graph v0.1",
+  "annotationDate": "2026-09-21",
+  "annotationPolicy": {
+    "purpose": "Attention Diffusion / Memory Emergence Toy Demo P0",
+    "associationStrengthMeaning": "人工 demo prior，只表示联想传播的初始强弱，不是事实置信度或概率。",
+    "levels": {
+      "VERY_STRONG": 0.95,
+      "STRONG": 0.8,
+      "MEDIUM": 0.6,
+      "WEAK": 0.35,
+      "VERY_WEAK": 0.15
+    },
+    "identityPolicy": "不做 canonical merge。别名/身份只通过普通关联边连接。",
+    "edgeDirectionPolicy": "P0 扩散引擎按有向边运行；需要可双向联想的关系显式标注两条方向边。",
+    "truthPolicy": "EMERGED 表示进入当前 Working Memory，不表示事实为真。",
+    "sourcePolicy": "仅从 IRIS 记忆集中有依据的内容构造节点；部分 Concept/Memory 节点是对原始内容的人工结构化投影。",
+    "dryRunNote": "使用 Spec P0 建议参数进行一次非正式 dry-run；A2 三路 cue 在 WEAK=0.35 时峰值约 0.092，调为 MEDIUM=0.60 后峰值约 0.112，可跨过建议 emergenceThreshold=0.10。该调整仅用于核心多路径涌现演示。"
+  },
+  "nodes": [
+    {
+      "id": "person:2960945437",
+      "type": "Person",
+      "label": "2960945437 / NICEICK",
+      "sourceMemoryIds": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "irisSourceIds": [
+          "person_a36a09a3f60b"
+        ],
+        "annotationNote": "IRIS Person 节点；内容明确包含 NICEICK、心象蜃気楼、世界计划、星乃一歌等长期关联。"
+      }
+    },
+    {
+      "id": "alias:niceick",
+      "type": "Alias",
+      "label": "NICEICK",
+      "sourceMemoryIds": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "annotationNote": "人物常用昵称。"
+      }
+    },
+    {
+      "id": "alias:xinxiang_shenqilou",
+      "type": "Alias",
+      "label": "心象蜃気楼",
+      "sourceMemoryIds": [],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "irisSourceIds": [
+          "person_a36a09a3f60b"
+        ],
+        "annotationNote": "IRIS Person 内容明确称该用户昵称为心象蜃気楼。"
+      }
+    },
+    {
+      "id": "game:pjsk",
+      "type": "Concept",
+      "label": "世界计划 / Project Sekai",
+      "sourceMemoryIds": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "irisSourceIds": [
+          "preference_01f4e4556585",
+          "preference_2d3cfc04443f"
+        ]
+      }
+    },
+    {
+      "id": "game:maimai",
+      "type": "Concept",
+      "label": "舞萌 / maimai",
+      "sourceMemoryIds": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "cluster": "A_NICEICK"
+      }
+    },
+    {
+      "id": "character:ichika",
+      "type": "Concept",
+      "label": "星乃一歌",
+      "sourceMemoryIds": [],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "irisSourceIds": [
+          "person_a36a09a3f60b",
+          "preference_eb382bcda55f"
+        ]
+      }
+    },
+    {
+      "id": "concept:leo_need",
+      "type": "Concept",
+      "label": "Leo/need",
+      "sourceMemoryIds": [],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "irisSourceIds": [
+          "preference_eb382bcda55f"
+        ]
+      }
+    },
+    {
+      "id": "artist:n_buna",
+      "type": "Concept",
+      "label": "n-buna",
+      "sourceMemoryIds": [],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "irisSourceIds": [
+          "person_a36a09a3f60b"
+        ]
+      }
+    },
+    {
+      "id": "activity:film_photography",
+      "type": "Activity",
+      "label": "胶片摄影",
+      "sourceMemoryIds": [],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "irisSourceIds": [
+          "person_a36a09a3f60b"
+        ]
+      }
+    },
+    {
+      "id": "concept:poetry_lyrics",
+      "type": "Concept",
+      "label": "爱情 / 孤独 / 自由主题的诗歌歌词",
+      "sourceMemoryIds": [],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "irisSourceIds": [
+          "preference_b4752fbc0603"
+        ]
+      }
+    },
+    {
+      "id": "song:flyway",
+      "type": "Concept",
+      "label": "Flyway",
+      "sourceMemoryIds": [],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "irisSourceIds": [
+          "preference_b630fb62758b"
+        ]
+      }
+    },
+    {
+      "id": "memory:niceick_games",
+      "type": "Memory",
+      "label": "NICEICK 玩舞萌和《世界计划》",
+      "sourceMemoryIds": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "verbatimSource": "NICEICK玩舞萌（maimai）和世界计划（Project Sekai）"
+      }
+    },
+    {
+      "id": "memory:niceick_pjsk_ichika",
+      "type": "Memory",
+      "label": "NICEICK 喜欢《世界计划》及星乃一歌",
+      "sourceMemoryIds": [],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "irisSourceIds": [
+          "person_a36a09a3f60b",
+          "preference_eb382bcda55f"
+        ],
+        "annotationNote": "由 IRIS Person/Preference 中重复出现的 NICEICK—世界计划—星乃一歌关系构成实验性 Memory 节点。"
+      }
+    },
+    {
+      "id": "memory:niceick_poetry",
+      "type": "Memory",
+      "label": "NICEICK 喜欢分享爱情、孤独、自由主题诗歌与歌词",
+      "sourceMemoryIds": [],
+      "metadata": {
+        "cluster": "A_NICEICK",
+        "irisSourceIds": [
+          "preference_b4752fbc0603"
+        ]
+      }
+    },
+    {
+      "id": "self:xiaotianwen",
+      "type": "Self",
+      "label": "小天文",
+      "sourceMemoryIds": [
+        "mem_7393e77a5a1f",
+        "mem_6d6372725fae",
+        "mem_85b4a64af3c8"
+      ],
+      "metadata": {
+        "cluster": "B_SELF"
+      }
+    },
+    {
+      "id": "alias:assistant",
+      "type": "Alias",
+      "label": "助手 / 社娘",
+      "sourceMemoryIds": [
+        "mem_7393e77a5a1f",
+        "mem_ca4ebd3222bc"
+      ],
+      "metadata": {
+        "cluster": "B_SELF"
+      }
+    },
+    {
+      "id": "alias:xiaotianwen_miao",
+      "type": "Alias",
+      "label": "小天文喵",
+      "sourceMemoryIds": [
+        "mem_6d6372725fae",
+        "mem_85b4a64af3c8"
+      ],
+      "metadata": {
+        "cluster": "B_SELF"
+      }
+    },
+    {
+      "id": "role:astronomy_club_mascot",
+      "type": "Role",
+      "label": "华理天文社社娘",
+      "sourceMemoryIds": [
+        "mem_7393e77a5a1f",
+        "mem_6d6372725fae"
+      ],
+      "metadata": {
+        "cluster": "B_SELF"
+      }
+    },
+    {
+      "id": "person:longz",
+      "type": "Person",
+      "label": "longz / 龙洲",
+      "sourceMemoryIds": [
+        "mem_ca4ebd3222bc",
+        "mem_85b4a64af3c8",
+        "mem_c98040fc9bbf"
+      ],
+      "metadata": {
+        "cluster": "B_SELF"
+      }
+    },
+    {
+      "id": "activity:astronomy_observation",
+      "type": "Activity",
+      "label": "天文观测",
+      "sourceMemoryIds": [
+        "mem_7393e77a5a1f",
+        "mem_6d6372725fae",
+        "mem_d50c4a439f36"
+      ],
+      "metadata": {
+        "cluster": "B_SELF"
+      }
+    },
+    {
+      "id": "concept:meteor_shower",
+      "type": "Concept",
+      "label": "流星雨",
+      "sourceMemoryIds": [
+        "mem_d50c4a439f36",
+        "mem_d2399fc62e7c"
+      ],
+      "metadata": {
+        "cluster": "B_SELF"
+      }
+    },
+    {
+      "id": "memory:self_identity",
+      "type": "Memory",
+      "label": "小天文是华理天文社社娘，负责观测和天气",
+      "sourceMemoryIds": [
+        "mem_7393e77a5a1f",
+        "mem_6d6372725fae"
+      ],
+      "metadata": {
+        "cluster": "B_SELF"
+      }
+    },
+    {
+      "id": "memory:self_creator",
+      "type": "Memory",
+      "label": "小天文由 longz 创建和长期培养",
+      "sourceMemoryIds": [
+        "mem_ca4ebd3222bc",
+        "mem_85b4a64af3c8",
+        "mem_c98040fc9bbf"
+      ],
+      "metadata": {
+        "cluster": "B_SELF"
+      }
+    },
+    {
+      "id": "person:3332628631",
+      "type": "Person",
+      "label": "3332628631 / 不爱记笔记",
+      "sourceMemoryIds": [
+        "mem_bfea85cf3634",
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "cluster": "C_8SE"
+      }
+    },
+    {
+      "id": "alias:buai_jibiji",
+      "type": "Alias",
+      "label": "不爱记笔记",
+      "sourceMemoryIds": [
+        "mem_bfea85cf3634",
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "cluster": "C_8SE"
+      }
+    },
+    {
+      "id": "object:celestron_8se",
+      "type": "Object",
+      "label": "星特朗 8SE 望远镜",
+      "sourceMemoryIds": [
+        "mem_bfea85cf3634"
+      ],
+      "metadata": {
+        "cluster": "C_8SE"
+      }
+    },
+    {
+      "id": "activity:visual_observation",
+      "type": "Activity",
+      "label": "目视观测",
+      "sourceMemoryIds": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "cluster": "C_8SE"
+      }
+    },
+    {
+      "id": "concept:sun",
+      "type": "Concept",
+      "label": "太阳",
+      "sourceMemoryIds": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "cluster": "C_8SE"
+      }
+    },
+    {
+      "id": "concept:moon",
+      "type": "Concept",
+      "label": "月亮",
+      "sourceMemoryIds": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "cluster": "C_8SE"
+      }
+    },
+    {
+      "id": "concept:planet",
+      "type": "Concept",
+      "label": "行星",
+      "sourceMemoryIds": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "cluster": "C_8SE"
+      }
+    },
+    {
+      "id": "memory:owns_8se",
+      "type": "Memory",
+      "label": "不爱记笔记拥有一台 8SE，并愿意让别人使用",
+      "sourceMemoryIds": [
+        "mem_bfea85cf3634"
+      ],
+      "metadata": {
+        "cluster": "C_8SE"
+      }
+    },
+    {
+      "id": "memory:club_visual_observation",
+      "type": "Memory",
+      "label": "其所在社团主要目视观测太阳、月亮和行星",
+      "sourceMemoryIds": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "cluster": "C_8SE"
+      }
+    },
+    {
+      "id": "person:amaryllis",
+      "type": "Person",
+      "label": "Amaryllis",
+      "sourceMemoryIds": [
+        "mem_ba934fde6aa4",
+        "mem_ace71c9d6f88"
+      ],
+      "metadata": {
+        "cluster": "D_XUHUI",
+        "userId": "2089197464"
+      }
+    },
+    {
+      "id": "person:1052363266",
+      "type": "Person",
+      "label": "宇佐见·绣 / 1052363266",
+      "sourceMemoryIds": [
+        "mem_015f1c121110"
+      ],
+      "metadata": {
+        "cluster": "D_XUHUI",
+        "userId": "1052363266"
+      }
+    },
+    {
+      "id": "location:xuhui",
+      "type": "Location",
+      "label": "上海徐汇",
+      "sourceMemoryIds": [
+        "mem_ba934fde6aa4",
+        "mem_015f1c121110"
+      ],
+      "metadata": {
+        "cluster": "D_XUHUI"
+      }
+    },
+    {
+      "id": "activity:commuting",
+      "type": "Activity",
+      "label": "走读",
+      "sourceMemoryIds": [
+        "mem_ace71c9d6f88"
+      ],
+      "metadata": {
+        "cluster": "D_XUHUI"
+      }
+    },
+    {
+      "id": "goal:summer_xuhui",
+      "type": "Goal",
+      "label": "暑假住在徐汇",
+      "sourceMemoryIds": [
+        "mem_015f1c121110"
+      ],
+      "metadata": {
+        "cluster": "D_XUHUI"
+      }
+    },
+    {
+      "id": "memory:amaryllis_xuhui",
+      "type": "Memory",
+      "label": "Amaryllis 在上海徐汇，但不在学校",
+      "sourceMemoryIds": [
+        "mem_ba934fde6aa4"
+      ],
+      "metadata": {
+        "cluster": "D_XUHUI"
+      }
+    },
+    {
+      "id": "memory:amaryllis_commute",
+      "type": "Memory",
+      "label": "Amaryllis 开学后走读",
+      "sourceMemoryIds": [
+        "mem_ace71c9d6f88"
+      ],
+      "metadata": {
+        "cluster": "D_XUHUI"
+      }
+    },
+    {
+      "id": "location:ecust_fengxian",
+      "type": "Location",
+      "label": "华东理工大学奉贤校区",
+      "sourceMemoryIds": [
+        "mem_1b03a079256e",
+        "mem_74baf49039a3",
+        "mem_bcab6124588d",
+        "mem_f03fa67bbe8c",
+        "mem_88909dc54a2f",
+        "mem_341582011ad1"
+      ],
+      "metadata": {
+        "cluster": "E_TONGHAI",
+        "irisSourceIds": [
+          "location_441c7d65b1ca"
+        ]
+      }
+    },
+    {
+      "id": "location:tonghai_lake",
+      "type": "Location",
+      "label": "通海湖",
+      "sourceMemoryIds": [
+        "mem_1b03a079256e",
+        "mem_74baf49039a3",
+        "mem_bcab6124588d",
+        "mem_f03fa67bbe8c",
+        "mem_88909dc54a2f",
+        "mem_341582011ad1",
+        "mem_ccc519ea2bf8"
+      ],
+      "metadata": {
+        "cluster": "E_TONGHAI",
+        "irisSourceIds": [
+          "location_a4d07e7a322b"
+        ]
+      }
+    },
+    {
+      "id": "memory:fengxian_lake_name",
+      "type": "Memory",
+      "label": "华理奉贤校区的湖叫通海湖",
+      "sourceMemoryIds": [
+        "mem_ccc519ea2bf8"
+      ],
+      "metadata": {
+        "cluster": "E_TONGHAI"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:001",
+      "source": "alias:niceick",
+      "target": "person:2960945437",
+      "relation": "refers_to",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:002",
+      "source": "person:2960945437",
+      "target": "alias:niceick",
+      "relation": "known_as",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:003",
+      "source": "alias:xinxiang_shenqilou",
+      "target": "person:2960945437",
+      "relation": "refers_to",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior",
+        "annotationNote": "来自 IRIS Person 内容；保守低于 NICEICK 主昵称。"
+      }
+    },
+    {
+      "id": "edge:004",
+      "source": "person:2960945437",
+      "target": "alias:xinxiang_shenqilou",
+      "relation": "known_as",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior",
+        "annotationNote": "来自 IRIS Person 内容；保守低于 NICEICK 主昵称。"
+      }
+    },
+    {
+      "id": "edge:005",
+      "source": "person:2960945437",
+      "target": "game:pjsk",
+      "relation": "plays",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:006",
+      "source": "game:pjsk",
+      "target": "person:2960945437",
+      "relation": "played_by",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:007",
+      "source": "person:2960945437",
+      "target": "game:maimai",
+      "relation": "plays",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:008",
+      "source": "game:maimai",
+      "target": "person:2960945437",
+      "relation": "played_by",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:009",
+      "source": "person:2960945437",
+      "target": "character:ichika",
+      "relation": "likes",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:010",
+      "source": "character:ichika",
+      "target": "person:2960945437",
+      "relation": "liked_by",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:011",
+      "source": "person:2960945437",
+      "target": "concept:leo_need",
+      "relation": "prefers",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:012",
+      "source": "concept:leo_need",
+      "target": "person:2960945437",
+      "relation": "preferred_by",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:013",
+      "source": "person:2960945437",
+      "target": "artist:n_buna",
+      "relation": "likes",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:014",
+      "source": "artist:n_buna",
+      "target": "person:2960945437",
+      "relation": "liked_by",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:015",
+      "source": "person:2960945437",
+      "target": "activity:film_photography",
+      "relation": "engages_in",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:016",
+      "source": "activity:film_photography",
+      "target": "person:2960945437",
+      "relation": "associated_person",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:017",
+      "source": "person:2960945437",
+      "target": "concept:poetry_lyrics",
+      "relation": "likes",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:018",
+      "source": "concept:poetry_lyrics",
+      "target": "person:2960945437",
+      "relation": "liked_by",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:019",
+      "source": "person:2960945437",
+      "target": "song:flyway",
+      "relation": "likes_or_recommends",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:020",
+      "source": "song:flyway",
+      "target": "person:2960945437",
+      "relation": "liked_by",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:021",
+      "source": "game:pjsk",
+      "target": "character:ichika",
+      "relation": "contains_character",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:022",
+      "source": "character:ichika",
+      "target": "game:pjsk",
+      "relation": "belongs_to_game",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:023",
+      "source": "game:pjsk",
+      "target": "concept:leo_need",
+      "relation": "contains_group",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:024",
+      "source": "concept:leo_need",
+      "target": "game:pjsk",
+      "relation": "belongs_to_game",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:025",
+      "source": "concept:leo_need",
+      "target": "character:ichika",
+      "relation": "has_member",
+      "associationStrength": 0.95,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:026",
+      "source": "character:ichika",
+      "target": "concept:leo_need",
+      "relation": "member_of",
+      "associationStrength": 0.95,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:027",
+      "source": "memory:niceick_games",
+      "target": "alias:niceick",
+      "relation": "has_cue",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:028",
+      "source": "alias:niceick",
+      "target": "memory:niceick_games",
+      "relation": "evokes_memory",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:029",
+      "source": "memory:niceick_games",
+      "target": "game:pjsk",
+      "relation": "has_cue",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:030",
+      "source": "game:pjsk",
+      "target": "memory:niceick_games",
+      "relation": "evokes_memory",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:031",
+      "source": "memory:niceick_games",
+      "target": "game:maimai",
+      "relation": "has_cue",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:032",
+      "source": "game:maimai",
+      "target": "memory:niceick_games",
+      "relation": "evokes_memory",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_a199a43620e1"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:033",
+      "source": "memory:niceick_pjsk_ichika",
+      "target": "alias:niceick",
+      "relation": "has_cue",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior",
+        "annotationNote": "Toy Demo P0: 为验证多路径汇聚，三条独立 cue 使用一致的 MEDIUM 人工先验；不是事实置信度。"
+      }
+    },
+    {
+      "id": "edge:034",
+      "source": "alias:niceick",
+      "target": "memory:niceick_pjsk_ichika",
+      "relation": "evokes_memory",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior",
+        "annotationNote": "Toy Demo P0: 为验证多路径汇聚，三条独立 cue 使用一致的 MEDIUM 人工先验；不是事实置信度。"
+      }
+    },
+    {
+      "id": "edge:035",
+      "source": "memory:niceick_pjsk_ichika",
+      "target": "game:pjsk",
+      "relation": "has_cue",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior",
+        "annotationNote": "Toy Demo P0: 为验证多路径汇聚，三条独立 cue 使用一致的 MEDIUM 人工先验；不是事实置信度。"
+      }
+    },
+    {
+      "id": "edge:036",
+      "source": "game:pjsk",
+      "target": "memory:niceick_pjsk_ichika",
+      "relation": "evokes_memory",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior",
+        "annotationNote": "Toy Demo P0: 为验证多路径汇聚，三条独立 cue 使用一致的 MEDIUM 人工先验；不是事实置信度。"
+      }
+    },
+    {
+      "id": "edge:037",
+      "source": "memory:niceick_pjsk_ichika",
+      "target": "character:ichika",
+      "relation": "has_cue",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior",
+        "annotationNote": "Toy Demo P0: 为验证多路径汇聚，三条独立 cue 使用一致的 MEDIUM 人工先验；不是事实置信度。"
+      }
+    },
+    {
+      "id": "edge:038",
+      "source": "character:ichika",
+      "target": "memory:niceick_pjsk_ichika",
+      "relation": "evokes_memory",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior",
+        "annotationNote": "Toy Demo P0: 为验证多路径汇聚，三条独立 cue 使用一致的 MEDIUM 人工先验；不是事实置信度。"
+      }
+    },
+    {
+      "id": "edge:039",
+      "source": "memory:niceick_poetry",
+      "target": "alias:niceick",
+      "relation": "has_cue",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:040",
+      "source": "alias:niceick",
+      "target": "memory:niceick_poetry",
+      "relation": "evokes_memory",
+      "associationStrength": 0.6,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:041",
+      "source": "memory:niceick_poetry",
+      "target": "concept:poetry_lyrics",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:042",
+      "source": "concept:poetry_lyrics",
+      "target": "memory:niceick_poetry",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:043",
+      "source": "alias:assistant",
+      "target": "self:xiaotianwen",
+      "relation": "refers_to",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_7393e77a5a1f",
+        "mem_ca4ebd3222bc"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:044",
+      "source": "self:xiaotianwen",
+      "target": "alias:assistant",
+      "relation": "known_as",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_7393e77a5a1f",
+        "mem_ca4ebd3222bc"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:045",
+      "source": "alias:xiaotianwen_miao",
+      "target": "self:xiaotianwen",
+      "relation": "refers_to",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_6d6372725fae",
+        "mem_85b4a64af3c8"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:046",
+      "source": "self:xiaotianwen",
+      "target": "alias:xiaotianwen_miao",
+      "relation": "known_as",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_6d6372725fae",
+        "mem_85b4a64af3c8"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:047",
+      "source": "self:xiaotianwen",
+      "target": "role:astronomy_club_mascot",
+      "relation": "has_role",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_7393e77a5a1f",
+        "mem_6d6372725fae"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:048",
+      "source": "role:astronomy_club_mascot",
+      "target": "self:xiaotianwen",
+      "relation": "role_of",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_7393e77a5a1f",
+        "mem_6d6372725fae"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:049",
+      "source": "self:xiaotianwen",
+      "target": "person:longz",
+      "relation": "created_by",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_ca4ebd3222bc",
+        "mem_85b4a64af3c8",
+        "mem_c98040fc9bbf"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:050",
+      "source": "person:longz",
+      "target": "self:xiaotianwen",
+      "relation": "creator_of",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_ca4ebd3222bc",
+        "mem_85b4a64af3c8",
+        "mem_c98040fc9bbf"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:051",
+      "source": "self:xiaotianwen",
+      "target": "activity:astronomy_observation",
+      "relation": "interested_in",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_d50c4a439f36"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:052",
+      "source": "activity:astronomy_observation",
+      "target": "self:xiaotianwen",
+      "relation": "associated_self",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_d50c4a439f36"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:053",
+      "source": "activity:astronomy_observation",
+      "target": "concept:meteor_shower",
+      "relation": "includes_topic",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_d50c4a439f36"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:054",
+      "source": "concept:meteor_shower",
+      "target": "activity:astronomy_observation",
+      "relation": "observation_topic",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_d50c4a439f36"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:055",
+      "source": "self:xiaotianwen",
+      "target": "concept:meteor_shower",
+      "relation": "interested_in",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_d50c4a439f36",
+        "mem_d2399fc62e7c"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:056",
+      "source": "concept:meteor_shower",
+      "target": "self:xiaotianwen",
+      "relation": "associated_self",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_d50c4a439f36",
+        "mem_d2399fc62e7c"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:057",
+      "source": "memory:self_identity",
+      "target": "self:xiaotianwen",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_7393e77a5a1f",
+        "mem_6d6372725fae"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:058",
+      "source": "self:xiaotianwen",
+      "target": "memory:self_identity",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_7393e77a5a1f",
+        "mem_6d6372725fae"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:059",
+      "source": "memory:self_identity",
+      "target": "role:astronomy_club_mascot",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_7393e77a5a1f",
+        "mem_6d6372725fae"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:060",
+      "source": "role:astronomy_club_mascot",
+      "target": "memory:self_identity",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_7393e77a5a1f",
+        "mem_6d6372725fae"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:061",
+      "source": "memory:self_creator",
+      "target": "self:xiaotianwen",
+      "relation": "has_cue",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_ca4ebd3222bc",
+        "mem_85b4a64af3c8"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:062",
+      "source": "self:xiaotianwen",
+      "target": "memory:self_creator",
+      "relation": "evokes_memory",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_ca4ebd3222bc",
+        "mem_85b4a64af3c8"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:063",
+      "source": "memory:self_creator",
+      "target": "person:longz",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ca4ebd3222bc",
+        "mem_85b4a64af3c8"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:064",
+      "source": "person:longz",
+      "target": "memory:self_creator",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ca4ebd3222bc",
+        "mem_85b4a64af3c8"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:065",
+      "source": "alias:buai_jibiji",
+      "target": "person:3332628631",
+      "relation": "refers_to",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_bfea85cf3634",
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:066",
+      "source": "person:3332628631",
+      "target": "alias:buai_jibiji",
+      "relation": "known_as",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_bfea85cf3634",
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:067",
+      "source": "person:3332628631",
+      "target": "object:celestron_8se",
+      "relation": "owns",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_bfea85cf3634"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:068",
+      "source": "object:celestron_8se",
+      "target": "person:3332628631",
+      "relation": "owned_by",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_bfea85cf3634"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:069",
+      "source": "person:3332628631",
+      "target": "activity:visual_observation",
+      "relation": "club_activity",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:070",
+      "source": "activity:visual_observation",
+      "target": "person:3332628631",
+      "relation": "associated_person",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:071",
+      "source": "object:celestron_8se",
+      "target": "activity:visual_observation",
+      "relation": "used_for",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_bfea85cf3634",
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:072",
+      "source": "activity:visual_observation",
+      "target": "object:celestron_8se",
+      "relation": "uses_equipment",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_bfea85cf3634",
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:073",
+      "source": "activity:visual_observation",
+      "target": "concept:sun",
+      "relation": "target",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:074",
+      "source": "concept:sun",
+      "target": "activity:visual_observation",
+      "relation": "observed_by",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:075",
+      "source": "activity:visual_observation",
+      "target": "concept:moon",
+      "relation": "target",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:076",
+      "source": "concept:moon",
+      "target": "activity:visual_observation",
+      "relation": "observed_by",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:077",
+      "source": "activity:visual_observation",
+      "target": "concept:planet",
+      "relation": "target",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:078",
+      "source": "concept:planet",
+      "target": "activity:visual_observation",
+      "relation": "observed_by",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:079",
+      "source": "memory:owns_8se",
+      "target": "alias:buai_jibiji",
+      "relation": "has_cue",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_bfea85cf3634"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:080",
+      "source": "alias:buai_jibiji",
+      "target": "memory:owns_8se",
+      "relation": "evokes_memory",
+      "associationStrength": 0.6,
+      "evidence": [
+        "mem_bfea85cf3634"
+      ],
+      "metadata": {
+        "annotationLevel": "MEDIUM",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:081",
+      "source": "memory:owns_8se",
+      "target": "object:celestron_8se",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_bfea85cf3634"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:082",
+      "source": "object:celestron_8se",
+      "target": "memory:owns_8se",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_bfea85cf3634"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:083",
+      "source": "memory:club_visual_observation",
+      "target": "alias:buai_jibiji",
+      "relation": "has_cue",
+      "associationStrength": 0.35,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "WEAK",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:084",
+      "source": "alias:buai_jibiji",
+      "target": "memory:club_visual_observation",
+      "relation": "evokes_memory",
+      "associationStrength": 0.35,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "WEAK",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:085",
+      "source": "memory:club_visual_observation",
+      "target": "activity:visual_observation",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:086",
+      "source": "activity:visual_observation",
+      "target": "memory:club_visual_observation",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:087",
+      "source": "memory:club_visual_observation",
+      "target": "concept:sun",
+      "relation": "has_cue",
+      "associationStrength": 0.35,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "WEAK",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:088",
+      "source": "concept:sun",
+      "target": "memory:club_visual_observation",
+      "relation": "evokes_memory",
+      "associationStrength": 0.35,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "WEAK",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:089",
+      "source": "memory:club_visual_observation",
+      "target": "concept:moon",
+      "relation": "has_cue",
+      "associationStrength": 0.35,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "WEAK",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:090",
+      "source": "concept:moon",
+      "target": "memory:club_visual_observation",
+      "relation": "evokes_memory",
+      "associationStrength": 0.35,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "WEAK",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:091",
+      "source": "memory:club_visual_observation",
+      "target": "concept:planet",
+      "relation": "has_cue",
+      "associationStrength": 0.35,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "WEAK",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:092",
+      "source": "concept:planet",
+      "target": "memory:club_visual_observation",
+      "relation": "evokes_memory",
+      "associationStrength": 0.35,
+      "evidence": [
+        "mem_15f0c3f2f406"
+      ],
+      "metadata": {
+        "annotationLevel": "WEAK",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:093",
+      "source": "person:amaryllis",
+      "target": "location:xuhui",
+      "relation": "located_in",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ba934fde6aa4"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:094",
+      "source": "location:xuhui",
+      "target": "person:amaryllis",
+      "relation": "hosts_person_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ba934fde6aa4"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:095",
+      "source": "person:amaryllis",
+      "target": "activity:commuting",
+      "relation": "status",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ace71c9d6f88"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:096",
+      "source": "activity:commuting",
+      "target": "person:amaryllis",
+      "relation": "associated_person",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ace71c9d6f88"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:097",
+      "source": "person:1052363266",
+      "target": "goal:summer_xuhui",
+      "relation": "has_goal",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_015f1c121110"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:098",
+      "source": "goal:summer_xuhui",
+      "target": "person:1052363266",
+      "relation": "goal_of",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_015f1c121110"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:099",
+      "source": "goal:summer_xuhui",
+      "target": "location:xuhui",
+      "relation": "target_location",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_015f1c121110"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:100",
+      "source": "location:xuhui",
+      "target": "goal:summer_xuhui",
+      "relation": "target_of_goal",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_015f1c121110"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:101",
+      "source": "memory:amaryllis_xuhui",
+      "target": "person:amaryllis",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ba934fde6aa4"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:102",
+      "source": "person:amaryllis",
+      "target": "memory:amaryllis_xuhui",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ba934fde6aa4"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:103",
+      "source": "memory:amaryllis_xuhui",
+      "target": "location:xuhui",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ba934fde6aa4"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:104",
+      "source": "location:xuhui",
+      "target": "memory:amaryllis_xuhui",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ba934fde6aa4"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:105",
+      "source": "memory:amaryllis_commute",
+      "target": "person:amaryllis",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ace71c9d6f88"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:106",
+      "source": "person:amaryllis",
+      "target": "memory:amaryllis_commute",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ace71c9d6f88"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:107",
+      "source": "memory:amaryllis_commute",
+      "target": "activity:commuting",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ace71c9d6f88"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:108",
+      "source": "activity:commuting",
+      "target": "memory:amaryllis_commute",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ace71c9d6f88"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:109",
+      "source": "location:ecust_fengxian",
+      "target": "location:tonghai_lake",
+      "relation": "contains",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_ccc519ea2bf8"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:110",
+      "source": "location:tonghai_lake",
+      "target": "location:ecust_fengxian",
+      "relation": "located_in",
+      "associationStrength": 0.95,
+      "evidence": [
+        "mem_ccc519ea2bf8"
+      ],
+      "metadata": {
+        "annotationLevel": "VERY_STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:111",
+      "source": "memory:fengxian_lake_name",
+      "target": "location:ecust_fengxian",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ccc519ea2bf8"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:112",
+      "source": "location:ecust_fengxian",
+      "target": "memory:fengxian_lake_name",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ccc519ea2bf8"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:113",
+      "source": "memory:fengxian_lake_name",
+      "target": "location:tonghai_lake",
+      "relation": "has_cue",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ccc519ea2bf8"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    },
+    {
+      "id": "edge:114",
+      "source": "location:tonghai_lake",
+      "target": "memory:fengxian_lake_name",
+      "relation": "evokes_memory",
+      "associationStrength": 0.8,
+      "evidence": [
+        "mem_ccc519ea2bf8"
+      ],
+      "metadata": {
+        "annotationLevel": "STRONG",
+        "annotationKind": "manual_demo_prior"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "A1_ALIAS_BRIDGE",
+      "title": "心象蜃気楼平时玩什么？",
+      "description": "验证不做 canonical merge 时，别名仍能通过关联桥接到人物及其游戏兴趣。",
+      "context": "心象蜃気楼平时玩什么？",
+      "initialAttention": {
+        "alias:xinxiang_shenqilou": 1.0
+      },
+      "expectedEmergence": [
+        "person:2960945437",
+        "game:pjsk",
+        "game:maimai"
+      ],
+      "distractors": [
+        "concept:poetry_lyrics",
+        "song:flyway"
+      ],
+      "tags": [
+        "alias_fragmentation",
+        "no_canonical_merge",
+        "multi_hop"
+      ]
+    },
+    {
+      "id": "A2_MULTIPATH_PJSK",
+      "title": "NICEICK + 世界计划 + 星乃一歌",
+      "description": "核心多路径汇聚实验。三个种子分别从人物别名、游戏、角色侧向同一 Memory 节点汇聚。",
+      "context": "NICEICK 世界计划 星乃一歌",
+      "initialAttention": {
+        "alias:niceick": 0.34,
+        "game:pjsk": 0.33,
+        "character:ichika": 0.33
+      },
+      "expectedEmergence": [
+        "memory:niceick_pjsk_ichika"
+      ],
+      "distractors": [
+        "memory:niceick_poetry",
+        "activity:film_photography",
+        "song:flyway"
+      ],
+      "tags": [
+        "multi_seed",
+        "multi_path_convergence",
+        "core_demo"
+      ]
+    },
+    {
+      "id": "A3_CONTEXT_COMPETITION",
+      "title": "NICEICK 最近在拍什么？",
+      "description": "人物拥有多个强兴趣时，摄影 Context 应使摄影支路优先，而非总被世界计划支路吸走。",
+      "context": "NICEICK 最近在拍什么？",
+      "initialAttention": {
+        "alias:niceick": 0.55,
+        "activity:film_photography": 0.45
+      },
+      "expectedEmergence": [
+        "person:2960945437",
+        "activity:film_photography"
+      ],
+      "distractors": [
+        "game:pjsk",
+        "character:ichika"
+      ],
+      "tags": [
+        "context_competition",
+        "branch_selection"
+      ]
+    },
+    {
+      "id": "B1_SELF_CREATOR",
+      "title": "小天文喵是谁做出来的？",
+      "description": "Self alias 经过小天文主体激活 creator 与对应 Memory。",
+      "context": "小天文喵是谁做出来的？",
+      "initialAttention": {
+        "alias:xiaotianwen_miao": 1.0
+      },
+      "expectedEmergence": [
+        "self:xiaotianwen",
+        "person:longz",
+        "memory:self_creator"
+      ],
+      "distractors": [
+        "concept:meteor_shower"
+      ],
+      "tags": [
+        "alias_bridge",
+        "self_identity",
+        "multi_hop"
+      ]
+    },
+    {
+      "id": "B2_SELF_METEOR",
+      "title": "提到小天文和流星雨，应该首先联想到什么？",
+      "description": "验证异构 Self / Activity / Concept 在同一 Attention 系统中共同激活观测分支。",
+      "context": "小天文 流星雨",
+      "initialAttention": {
+        "self:xiaotianwen": 0.55,
+        "concept:meteor_shower": 0.45
+      },
+      "expectedEmergence": [
+        "activity:astronomy_observation"
+      ],
+      "distractors": [
+        "person:longz"
+      ],
+      "tags": [
+        "heterogeneous_nodes",
+        "context_competition"
+      ]
+    },
+    {
+      "id": "C1_8SE_CONVERGENCE",
+      "title": "不爱记笔记有什么能拿来观测行星的设备？",
+      "description": "人物路径与行星→目视观测路径同时指向 8SE，验证跨类型多路径汇聚。",
+      "context": "不爱记笔记 有什么设备可以观测行星？",
+      "initialAttention": {
+        "alias:buai_jibiji": 0.55,
+        "concept:planet": 0.45
+      },
+      "expectedEmergence": [
+        "object:celestron_8se",
+        "memory:owns_8se"
+      ],
+      "distractors": [
+        "concept:sun",
+        "concept:moon"
+      ],
+      "tags": [
+        "multi_hop",
+        "multi_path_convergence",
+        "heterogeneous_nodes",
+        "core_demo"
+      ]
+    },
+    {
+      "id": "D1_XUHUI_SHARED_CONTEXT",
+      "title": "徐汇这边我记得有哪些人？",
+      "description": "同一地点可以激活多个不同人物，但不应产生身份合并。",
+      "context": "徐汇这边我记得有哪些人？",
+      "initialAttention": {
+        "location:xuhui": 1.0
+      },
+      "expectedEmergence": [
+        "person:amaryllis",
+        "person:1052363266"
+      ],
+      "distractors": [],
+      "tags": [
+        "shared_context",
+        "anti_identity_collapse",
+        "branching"
+      ]
+    },
+    {
+      "id": "D2_COMMUTING",
+      "title": "谁开学后要走读？",
+      "description": "简单 Context-specific Recall；走读应优先激活 Amaryllis，而非另一位同样连接徐汇的人。",
+      "context": "谁开学后要走读？",
+      "initialAttention": {
+        "activity:commuting": 1.0
+      },
+      "expectedEmergence": [
+        "person:amaryllis",
+        "memory:amaryllis_commute"
+      ],
+      "distractors": [
+        "person:1052363266",
+        "goal:summer_xuhui"
+      ],
+      "tags": [
+        "context_specific",
+        "distractor_control"
+      ]
+    },
+    {
+      "id": "E1_TONGHAI_DIRECT",
+      "title": "奉贤校区那个湖叫什么？",
+      "description": "一跳强关联 positive control / sanity check。",
+      "context": "奉贤校区那个湖叫什么？",
+      "initialAttention": {
+        "location:ecust_fengxian": 1.0
+      },
+      "expectedEmergence": [
+        "location:tonghai_lake",
+        "memory:fengxian_lake_name"
+      ],
+      "distractors": [],
+      "tags": [
+        "direct_recall",
+        "sanity_check"
+      ]
+    }
+  ]
+}
