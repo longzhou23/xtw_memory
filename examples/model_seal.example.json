@@ -1,0 +1,59 @@
+{
+  "identity": "historical stable two-stage v0.2, not v0.15/v0.16 adoption",
+  "checkpoints": [
+    {
+      "branch": "boundary",
+      "path": "/absolute/path/to/models/boundary/checkpoint",
+      "files": {
+        "model.safetensors": {
+          "bytes": 1287653720,
+          "sha256": "482963c38aa714a710ac97a27cdd1c231f77911f4fbc527eeb3d6c645aa139cd"
+        },
+        "rl_agent_config.json": {
+          "bytes": 600,
+          "sha256": "52615836339af64e722e34c1c70b5fa213cbc230150e944cd82779caaa432533"
+        },
+        "encoder/config.json": {
+          "bytes": 1938,
+          "sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4"
+        },
+        "tokenizer/tokenizer_config.json": {
+          "bytes": 524,
+          "sha256": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1"
+        },
+        "tokenizer/tokenizer.json": {
+          "bytes": 34363188,
+          "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+        }
+      }
+    },
+    {
+      "branch": "ranking",
+      "path": "/absolute/path/to/models/ranking/checkpoint",
+      "files": {
+        "model.safetensors": {
+          "bytes": 1287653720,
+          "sha256": "41a06635613e3969ecf27315b37f68b36e835ad2df39c4e403fade575a4cbb18"
+        },
+        "rl_agent_config.json": {
+          "bytes": 586,
+          "sha256": "ad7e86c26766c6128dd81c56cef694a58df5ba67b522f738c15c03156189b002"
+        },
+        "encoder/config.json": {
+          "bytes": 1938,
+          "sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4"
+        },
+        "tokenizer/tokenizer_config.json": {
+          "bytes": 524,
+          "sha256": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1"
+        },
+        "tokenizer/tokenizer.json": {
+          "bytes": 34363188,
+          "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+        }
+      }
+    }
+  ],
+  "autonomous_replay": "NOT_RUN",
+  "does_not_validate_runtime": true
+}

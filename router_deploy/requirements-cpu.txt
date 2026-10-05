@@ -1,0 +1,6 @@
+# Install CPU torch from https://download.pytorch.org/whl/cpu first.
+torch==2.13.0
+transformers==5.17.0
+laya==0.3.20
+safetensors>=0.6,<1
+jieba==0.42.1

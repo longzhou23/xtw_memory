@@ -1,0 +1,128 @@
+[
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-00",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:00+08:00",
+      "text": "计划周五送笔记本维修，还没送到店里。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-01",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:01+08:00",
+      "text": "更正：改周六送修。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-02",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:02+08:00",
+      "text": "需要更换损坏的键盘。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-03",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:03+08:00",
+      "text": "先问店里键盘配件是否有货。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-04",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:04+08:00",
+      "text": "如果没货就等通知，不提前送过去。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-05",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:05+08:00",
+      "text": "希望周末之前确认库存。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-06",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:06+08:00",
+      "text": "送修之前要备份文件。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-07",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:07+08:00",
+      "text": "店家说明有货后会联系我。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-08",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:08+08:00",
+      "text": "我还没有收到确认消息。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-09",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:09+08:00",
+      "text": "维修时间取决于配件库存。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-10",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:10+08:00",
+      "text": "预算需要等店家报价。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-11",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:11+08:00",
+      "text": "还未付款。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-12",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:12+08:00",
+      "text": "也没有实际送修。"
+    }
+  },
+  {
+    "scope": "synthetic-demo",
+    "event": {
+      "id": "demo-13",
+      "speaker": "member-a",
+      "time": "2026-10-05T10:00:13+08:00",
+      "text": "现在仍是等店家通知的计划。"
+    }
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "sourceCommit": "58d1c7b9dcb98f4fb655bc212a460f509b839858",
+  "snapshotDate": "2026-10-05",
+  "note": "Source included uncommitted implementation. Hashes identify original input; gateway CLI adjusted only for portable model configuration.",
+  "files": [
+    {
+      "path": "research-mvp/research_memory/__init__.py",
+      "sourceSha256": "8600ffba5a88ed6351b776af85999da9e1a52d6c48513974c768267a501b1c85"
+    },
+    {
+      "path": "research-mvp/research_memory/chat_gateway.py",
+      "sourceSha256": "126fb419798563a35636bc4dc4ce305cee91ceff8dd5e11f166ccbb8187bd615"
+    },
+    {
+      "path": "research-mvp/research_memory/store.py",
+      "sourceSha256": "49c4f35f50290620d11c02bd942504303ab554685c71a18ff81d23309a7d49ec"
+    },
+    {
+      "path": "research-mvp/research_memory/episode_runtime.py",
+      "sourceSha256": "44aad18604fd7f8fcf04510f8f87fe21d357a414d9d4c68bea0ec194afcabde1"
+    },
+    {
+      "path": "research-mvp/research_memory/contracts.py",
+      "sourceSha256": "087d858a995011b328de098cc5c2506b11748f9f62ac5a5cf4263e0cd1eecc1d"
+    },
+    {
+      "path": "research-mvp/research_memory/episode_final.py",
+      "sourceSha256": "29d33b145d8f209ab10609bba308ff58ee00fe94c73513fde6d77512c8943f19"
+    },
+    {
+      "path": "research-mvp/research_memory/providers.py",
+      "sourceSha256": "60b8cec0c370ba37eaea2d48f65a63f6a8b8dc3b2dc7eabf26d2c6720cadb8ab"
+    },
+    {
+      "path": "research-mvp/research_memory/consolidation.py",
+      "sourceSha256": "45d279e4c0ac6cc37e282c43b82fa2d40a2a0684cf3ddcdce0d9954a3b5b8e0a"
+    },
+    {
+      "path": "research-mvp/research_memory/routing.py",
+      "sourceSha256": "ca07b7654139517e78613cbdc9129c5c09f9cb63c9e81fb3a1213ce15be212af"
+    },
+    {
+      "path": "router_deploy/xtw_router/__init__.py",
+      "sourceSha256": "9de1ffc8b5fcd510b66891af5882feb16d76a269c9eeda1aa3385003cc6230ec"
+    },
+    {
+      "path": "router_deploy/xtw_router/retrieval.py",
+      "sourceSha256": "c330d453017070474fd1ac64b6ef59d10c707e21d84fe0e18b9d10498621a816"
+    },
+    {
+      "path": "router_deploy/xtw_router/protocol.py",
+      "sourceSha256": "f9feff9125b1975c68c0e053e268c20d1dfd9193e1cdd81dccf68ca68386f939"
+    },
+    {
+      "path": "router_deploy/xtw_router/frozen.py",
+      "sourceSha256": "4f1c219bec3cfab2bdcfdb452d22cc8d53bd6a120e93b99ec270d4e870c0bf18"
+    },
+    {
+      "path": "research-mvp/scripts/chat_gateway.py",
+      "sourceSha256": "e6c5ec2179780ecf79c2a42a467fd2c11b6f65aad39cbf259f1c6ada35c52837"
+    },
+    {
+      "path": "router_deploy/requirements-cpu.txt",
+      "sourceSha256": "d0e7b1a9f17e2f9e6e8db1be148f558c8f996d7ffbc0844694dacdd84b07349a"
+    }
+  ]
+}
