@@ -1,7 +1,7 @@
 {
   "sourceCommit": "58d1c7b9dcb98f4fb655bc212a460f509b839858",
   "snapshotDate": "2026-10-05",
-  "note": "Source included uncommitted implementation. Hashes identify original input; gateway CLI adjusted only for portable model configuration.",
+  "note": "Original working tree included uncommitted implementation. Hashes identify original inputs. Gateway CLI and model default paths were made portable; contextual HTTP adapter and public model preparation tool were added separately.",
   "files": [
     {
       "path": "research-mvp/research_memory/__init__.py",
@@ -62,6 +62,38 @@
     {
       "path": "router_deploy/requirements-cpu.txt",
       "sourceSha256": "d0e7b1a9f17e2f9e6e8db1be148f558c8f996d7ffbc0844694dacdd84b07349a"
+    },
+    {
+      "path": "research-mvp/research_memory/context_recall.py",
+      "sourceSha256": "48ca65e14f0be41184883dd785c797b327441958c522c693371473d771e59dd1"
+    },
+    {
+      "path": "research-mvp/research_memory/context_significance.py",
+      "sourceSha256": "acd90e882fe71c96e11bd4a961cd563d2cb8f47512f390787822db1892cd453e"
+    },
+    {
+      "path": "research-mvp/research_memory/associative_recall.py",
+      "sourceSha256": "205e68443a14d66a2103c0f92ac495cf55251f706921927431185975fc77a0f4"
+    },
+    {
+      "path": "research-mvp/research_memory/recall.py",
+      "sourceSha256": "194d7d0460a42a3ba4fb9d651ce043bf82829b975cc86935e6b173983741de21"
+    },
+    {
+      "path": "research-mvp/research_memory/indexed_recall.py",
+      "sourceSha256": "f64b39835b485fa69d63f936c9e0b7f4227f1680bece137c94b401f63c9be02b"
+    },
+    {
+      "path": "research-mvp/research_memory/dynamics.py",
+      "sourceSha256": "1d8792979b60b70b6dd8415e8313e1393dfeee22030eb0f347315db363cfbccc"
+    },
+    {
+      "path": "research-mvp/research_memory/index.py",
+      "sourceSha256": "0a365aa90cdd70ba9dc9bb9b55ab91f1efef49b8ee84fcfde2c0de376e441e54"
+    },
+    {
+      "path": "research-mvp/research_memory/models.py",
+      "sourceSha256": "737f580398bca5eab8654f350d52b963f087a1fc7ae6a9c2f6af1eb43d3a1902"
     }
   ]
 }

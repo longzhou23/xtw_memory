@@ -318,7 +318,7 @@ class Worker:
         return count
 
 
-def make_server(inbox, token, port=8767):
+def make_server(inbox, token, port=8767, reader=None):
     text(token, 'token', 200)
     class Handler(BaseHTTPRequestHandler):
         protocol_version = 'HTTP/1.1'
@@ -361,6 +361,14 @@ def make_server(inbox, token, port=8767):
                 self.connection.settimeout(5)
                 value=json.loads(self.rfile.read(length))
                 if not isinstance(value,dict):raise Invalid('请求必须是对象')
+                if self.path=='/api/context':
+                    from .context_gateway import ReadUnavailable
+                    if reader is None:
+                        self.send(503,{'error':'语义读取未配置'});return
+                    try: result=reader.read(value)
+                    except ReadUnavailable as error:
+                        self.send(503,{'error':str(error)});return
+                    self.send(200,result);return
                 if self.path=='/api/stop' and value=={'confirm':True}:
                     self.send(202,{'stopping':True,'meaning':'停止接收，等待当前调用结束；队列保留'})
                     threading.Thread(target=self.server.shutdown,daemon=True).start()

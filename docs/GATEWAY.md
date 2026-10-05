@@ -34,6 +34,7 @@ scripts/chat-gateway retry 13
 
 | 接口 | 输入 / 用途 |
 |---|---|
+| POST /api/context | `{scope,currentState}` 与可选 mode/autoSignificance/limit/checkBudget/contextBudget；成功 200，详见[读取合同](READ_PATH.md) |
 | POST /api/messages | `{scope,event}`；202 返回持久接收 jobId |
 | GET /api/job?id=13 | 单个任务、原始消息、结果或失败原因 |
 | GET /api/jobs?scope=群号&after=0&limit=50 | 按接收 ID 分页，包含未整理原文 |

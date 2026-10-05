@@ -64,12 +64,13 @@ def main():
     parser.add_argument('--token-file',help='默认数据库路径加.token，客户端直接读取，不打印令牌')
     parser.add_argument('--url',default='http://127.0.0.1:8767')
     commands=parser.add_subparsers(dest='command',required=True)
-    serve=commands.add_parser('serve');serve.add_argument('--port',type=int,default=8767)
+    serve=commands.add_parser('serve');serve.add_argument('--read-models',default=os.environ.get('XTW_RESEARCH_MODELS',str(ROOT/'models/semantic')),help='本地BGE读取模型目录');serve.add_argument('--port',type=int,default=8767)
     serve.add_argument('--writer',choices=['codex'],required=True,help='显式启用现有外部记忆写入模型')
     serve.add_argument('--seal',default=os.environ.get('XTW_MEMORY_SEAL'),help='完整模型封存 JSON；也可设置 XTW_MEMORY_SEAL')
     ingest=commands.add_parser('import');ingest.add_argument('file');ingest.add_argument('--close',action='store_true')
     for name in ('jobs','summary','memories'):
         item=commands.add_parser(name);item.add_argument('scope');item.add_argument('--after',type=int,default=0);item.add_argument('--limit',type=int,default=50)
+    item=commands.add_parser('context');item.add_argument('file',help='scope/currentState读取请求JSON')
     commands.add_parser('status')
     commands.add_parser('stop')
     item=commands.add_parser('job');item.add_argument('id',type=int)
@@ -90,7 +91,10 @@ def main():
             with Path(args.seal).open('rb') as stream:seal_hash=hashlib.file_digest(stream,'sha256').hexdigest()
             inbox=Inbox(args.db,identity={'routerSealSha256':seal_hash,'threshold':.50,'inputVersion':INPUT_VERSION,
                                          'writer':'codex-gpt-6.1-sol-medium-openai-180s-zero-retries'})
-            server=make_server(inbox,token,args.port);stop=threading.Event()
+            from research_memory.context_gateway import ContextReader
+            judge=lambda:CodexProvider(model='gpt-6.1-sol',model_provider='openai',timeout=180,zero_retries=True,reasoning_effort='medium')
+            reader=ContextReader(inbox,args.read_models,provider_factory=judge)
+            server=make_server(inbox,token,args.port,reader=reader);stop=threading.Event()
             scorer=lambda:FrozenTwoJudgeCPU(args.seal,max_requests=None,max_passes=None,max_seconds=None,trace_limit=8)
             writer=lambda:CodexProvider(model='gpt-6.1-sol',model_provider='openai',timeout=180,zero_retries=True,reasoning_effort='medium')
             thread=threading.Thread(target=run_worker,args=(inbox,scorer,writer,stop));thread.start()
@@ -109,7 +113,7 @@ def main():
         def request(path,body=None):
             headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'}
             data=json.dumps(body,ensure_ascii=False).encode() if body is not None else None
-            with urllib.request.urlopen(urllib.request.Request(args.url.rstrip('/')+path,data,headers),timeout=10) as response:return json.load(response)
+            with urllib.request.urlopen(urllib.request.Request(args.url.rstrip('/')+path,data,headers),timeout=200 if path=='/api/context' else 10) as response:return json.load(response)
         if args.command=='import':
             count=0;groups=set()
             with Path(args.file).open('rb') as stream:fingerprint=hashlib.file_digest(stream,'sha256').hexdigest()[:24]
@@ -122,6 +126,7 @@ def main():
         elif args.command in ('jobs','summary','memories'):
             query=urllib.parse.urlencode({'scope':args.scope,'after':args.after,'limit':args.limit})
             emit(request('/api/'+args.command+'?'+query))
+        elif args.command=='context':emit(request('/api/context',json.loads(Path(args.file).read_text())))
         elif args.command=='status':emit(request('/health'))
         elif args.command=='stop':emit(request('/api/stop',{'confirm':True}))
         elif args.command=='job':emit(request('/api/job?id='+str(args.id)))

@@ -1,0 +1,20 @@
+{
+  "scope": "synthetic-demo",
+  "currentState": {
+    "messages": [
+      {
+        "id": "current-001",
+        "speaker": "member-a",
+        "time": "2026-10-05T20:00:00+08:00",
+        "text": "我继续准备送修笔记本，还要检查一下之前的安排。",
+        "replyTo": null
+      }
+    ],
+    "focusSpeakerId": "member-a"
+  },
+  "mode": "attention_diffusion",
+  "autoSignificance": false,
+  "limit": 4,
+  "checkBudget": 12,
+  "contextBudget": 8000
+}

@@ -1,6 +1,6 @@
 # 小天文 Memory：完整链路的最小实现
 
-小天文 Memory 是一个面向**内部、小规模群聊试用**的记忆整理服务。它先把消息可靠地保存到本地，再用 CPU 分类模型分配话题，把话题中的消息逐步整理成临时记忆，最后形成带来源证据的长期记忆。
+小天文 Memory 是一个面向**内部、小规模群聊试用**的记忆整理服务。它先把消息可靠地保存到本地，再用 CPU 分类模型分配话题，把话题中的消息逐步整理成临时记忆，最后形成带来源证据的长期记忆。读取时以当前对话触发本地语义召回、关联扩展或有限注意力扩散，再按显式适用性判断组装内部工作上下文。
 
 ```text
 群聊平台 / JSON 消息文件
@@ -19,6 +19,12 @@
                                       │ 关闭后整理
                                       ▼
                          Final 记忆 / 实体 / 关联 / 来源
+                                      │
+当前对话状态 → 本地 BGE 召回 / 关联扩展 / 扩散
+                                      │
+                           候选与轨迹 → 显式适用性判断
+                                      │
+                           有字符预算的内部工作上下文
 ```
 
 本分支提取当前开发版本的运行源码、合成示例和测试，便于单独阅读、验证和接入。**当前 Router 权重通过同仓库的 [GitHub Release](https://github.com/longzhou23/xtw_memory/releases/tag/memory-minimal-20261005-router-v02) 提供；真实运行还需要已登录的 Writer 环境。** 仓库和 Release 保持私有，下载需要仓库访问权限。大文件作为 Release 附件分发，不进入源码 Git 历史。
@@ -33,6 +39,7 @@ Router 仍有误并、误拆，历史语义验收为 `NOT_ADOPTED`。完整链�
 - [安装与模型准备](#安装与模型准备)
 - [启动与首次试用](#启动与首次试用)
 - [消息格式](#消息格式)
+- [读取与工作上下文](#读取与工作上下文)
 - [命令行参考](#命令行参考)
 - [HTTP API 与 Bot 接入](#http-api-与-bot-接入)
 - [任务状态与失败恢复](#任务状态与失败恢复)
@@ -54,9 +61,10 @@ Router 仍有误并、误拆，历史语义验收为 `NOT_ADOPTED`。完整链�
 | 可观察状态 | 查询接收、处理中、成功、归档、失败与待核查任务 |
 | 恢复 | 保留队列与原文；已知失败显式重试，不确定外部调用显式核查 |
 | 接入方式 | 回环 HTTP API，以及 JSON / JSONL 文件导入客户端 |
-| 读取 | 分页查看形成的记忆与实体节点、阶段、状态及证据 |
+| 读取 | 当前对话状态触发三种语义读取；另可分页查看节点与证据 |
+| 工作上下文 | 显式判断候选的当前用途，来源支持的有用记忆按字符预算组装 |
 
-本最小网关没有提供自动群聊回复、图片识别、网页管理界面、按查询召回接口、关联扩散实验、回应生成或完整 Bot 平台适配器。Final 可以形成关联，但 HTTP 网关不提供图遍历和关联检索接口。
+本最小网关没有提供自动群聊回复、图片识别、网页管理界面、回应生成或完整 Bot 平台适配器。读取入口使用实际当前对话状态，不需要把对话改成隐藏问答题；原研究版的多路 benchmark 页面不包含在本分支。
 
 ## 核心概念与处理流程
 
@@ -89,6 +97,7 @@ Router 仍有误并、误拆，历史语义验收为 `NOT_ADOPTED`。完整链�
 | Python | 3.11+；使用 `tomllib` 和 `hashlib.file_digest` |
 | 存储 | 本地可写目录，使用 Python 自带 SQLite |
 | Router | 两份完整、哈希匹配的 boundary / ranking checkpoint |
+| 读取模型 | 固定 BGE 中文 INT8 embedding 和 FP32 reranker；下载准备见下方 |
 | CPU 依赖 | 版本见 [requirements-cpu.txt](router_deploy/requirements-cpu.txt) |
 | Writer | 已安装且已登录的 **Codex CLI 0.159.3**；账户可运行 `gpt-6.1-sol` |
 | 内存 | 原本机完整网关约需 4–5 GiB；加载峰值及其他进程还需额外空间 |
@@ -119,6 +128,7 @@ python3 -m venv .venv
 .venv/bin/python -m pip install 'torch==2.13.0+cpu' \
   --index-url https://download.pytorch.org/whl/cpu
 .venv/bin/python -m pip install -r router_deploy/requirements-cpu.txt
+.venv/bin/python -m pip install -r research-mvp/requirements.txt
 ```
 
 不需要激活虚拟环境；启动脚本会自动选择根目录 `.venv/bin/python`。首次安装需联网。依赖或 Python 版本不支持当前平台时，先解决安装问题，再启动网关。
@@ -201,7 +211,27 @@ export XTW_MEMORY_SEAL="$(pwd)/models/model_seal.json"
 
 更多说明见 [CPU Router 模型边界](docs/MODELS.md)。
 
-### 4. 确认 Writer 环境
+### 4. 准备本地读取模型
+
+```sh
+# 首次联网下载固定公开 ONNX 文件并逐项校验，不访问聊天数据
+.venv/bin/python research-mvp/scripts/prepare_read_models.py
+```
+
+默认下载到 `models/semantic/`，总文件约 1.15 GB。下载使用固定 Hugging Face revision，不跟随上游最新版本：
+
+- 中文 embedding：`Xenova/bge-small-zh-v1.5@75c43b069aac4d136ba6bc1122f995fedcfd2781`，INT8 ONNX。
+- 重排：`Xenova/bge-reranker-base@280bcc27a84e0b898c251e06fddb25171bd9b101`，FP32 ONNX。
+
+文件已有且哈希匹配时直接复用；哈希不匹配不会覆盖原文件，也不签发新 manifest。下载失败的 `.partial` 保留以供检查，再次执行会重新下载未完成文件。公开源网络不可用时，可从已验证环境复制整个模型目录（含 `manifest.json`），并显式配置：
+
+```sh
+scripts/chat-gateway serve --writer codex --read-models /absolute/path/to/semantic-models
+```
+
+也可设置 `XTW_RESEARCH_MODELS`。运行时仅读本地模型，缺少文件或依赖时读取返回 `503`，不会自动下载或退回词面评分。读取模型首次请求时加载；Router 的 `READY` 不表示读取模型已经加载。
+
+### 5. 确认 Writer 环境
 
 ```sh
 codex --version
@@ -304,6 +334,73 @@ scripts/chat-gateway stop
 
 重复提交同一 `scope`、同一消息 ID、相同标准化内容时返回原回执，不重复处理。正文、时间或其他保留元数据不同则视为冲突。不同 `scope` 可以使用相同消息 ID。
 
+## 读取与工作上下文
+
+调用顺序是：**先确认过去任务完成 → 用当前尚未入库的对话读取 → 记录当前消息 → Bot 使用返回的内部上下文**。当前消息先入库再读取会触发未来污染检查；读取不会自动写入当前消息，也不会自动回复真实群。
+
+```sh
+# 编辑示例中的时间为真实当前时间，scope/speaker 使用实际稳定 ID
+scripts/chat-gateway context examples/context.json
+```
+
+文件内容示例：
+
+```json
+{
+  "scope": "synthetic-demo",
+  "currentState": {
+    "messages": [
+      {
+        "id": "current-001",
+        "speaker": "member-a",
+        "time": "2026-10-05T20:00:00+08:00",
+        "text": "我继续准备送修笔记本，还要检查一下之前的安排。",
+        "replyTo": null
+      }
+    ],
+    "focusSpeakerId": "member-a"
+  },
+  "mode": "attention_diffusion",
+  "autoSignificance": false,
+  "limit": 4,
+  "checkBudget": 12,
+  "contextBudget": 8000
+}
+```
+
+| 参数 | 含义 / 范围 |
+|---|---|
+| `scope` | 同一群聊数据空间，必需 |
+| `currentState` | 必需；包含 messages 与 focusSpeakerId，不接受 query、gold 或目标记忆 ID |
+| `messages` | 1–8 条有序当前消息；每条必须有 id/speaker/time/text/replyTo，不接受其他字段 |
+| `focusSpeakerId` | 来自当前消息的稳定作者 ID，不从昵称猜身份 |
+| `mode` | `formed_multiquery`、`graph_expansion` 或 `attention_diffusion`；默认第三种 |
+| `autoSignificance` | 默认 false；true 明确启用一次当前适用性模型判断，候选为空时零调用 |
+| `limit` | 返回候选上限 1–10，默认 4 |
+| `checkBudget` | 候选检查上限 1–48，默认 12 |
+| `contextBudget` | 最终 contextText JSON 字符预算 512–32000，默认 8000 |
+
+当前消息单条文本上限 1200 字符，组合后的状态表示上限 2000 字符。时间必须有时区且按顺序，当前 ID 不得重复。整份历史库必须早于当前状态的最早时间，拒绝当前或未来事件；同 scope 有 QUEUED/RUNNING/FAILED/REVIEW 时先完成或恢复。
+
+三种模式共享本地语义模型、来源和预算。普通扩展沿关系路径取候选；有限注意力扩散保留激活、竞争和传播轨迹。默认线索来自当前稳定参与者与可见文本，未增加自动线索规划模型调用。
+
+主要返回字段：
+
+- `arms[mode].memories`：候选，不能直接当成已判定有用的记忆。
+- `workingContextStatus`：未判断时为 `PENDING_SIGNIFICANCE` 或 `EMPTY_NO_CANDIDATES`；判断后为 `JUDGED_INTERNAL_CONTEXT`。
+- `selectedMemories`：通过适用性判断且满足最终字符预算的记录；默认为空。
+- `contextText`：包含当前状态、不可信历史提示与 selectedMemories 的 JSON 字符串，可交给 Bot 作为内部资料。
+- `significance`：显式判断的依据与模型调用信息；默认不存在。
+- `recallId`、模型指纹、来源、graphSnapshot 和传播 trace：读取审计资料。
+
+`autoSignificance=true` 使用现有同款 `gpt-6.1-sol / medium`，最多一次、180 秒预算、零自动重试。发送当前状态、实际候选及原文来源给模型；只有 `USEFUL_CONTEXT` 或 `NECESSARY_CONTEXT`、`SUPPORTED` 且允许使用的记录进入工作上下文。`INTERNAL_ONLY` 等标记和 `automaticInjectionAuthorized=false` 保留；返回上下文不构成对外披露授权。
+
+预算不足时舍弃整条记忆，不截断正文或来源；当前状态自身超过预算直接拒绝。完整审计响应不受 contextBudget 限制，Bot 应使用 contextText，避免重复注入整套轨迹。一次读取与其他读取串行化，繁忙返回 `503`。
+
+读取在数据库一致快照上建立索引，不在模型调用期间锁住写入。若源 scope 期间新增任务或修订，拒绝陈旧结果；失败不发布半套上下文或成功审计。成功只新增 recalls 审计，不改写历史节点、来源或关系。当前每次快照重建索引，限 10000 条历史事件和 5000 个可见图节点，不宣称大库吞吐能力。
+
+详细合同见 [读取路径说明](docs/READ_PATH.md)。
+
 ## 命令行参考
 
 ```text
@@ -318,8 +415,9 @@ scripts/chat-gateway [全局选项] 子命令 [子命令选项]
 
 | 子命令 | 用途 |
 |---|---|
-| `serve --writer codex [--seal PATH] [--port N]` | 启动服务；明确启用真实 Writer |
+| `serve --writer codex [--seal PATH] [--port N] [--read-models PATH]` | 启动服务；明确启用真实 Writer |
 | `status` | 查看后台状态、队列数量与 CPU 计数 |
+| `context FILE` | 按 JSON 请求文件读取当前状态；显式适用性判断时客户端等待最多 200 秒 |
 | `import FILE [--close]` | 顺序导入文件；可在导入后排入关闭任务 |
 | `jobs SCOPE [--after N] [--limit N]` | 按任务编号分页查询 |
 | `job ID` | 查询单个任务、原始输入、结果和错误 |
@@ -370,6 +468,7 @@ POST 还需要 `Content-Type: application/json`、有效的 `Content-Length`，�
 
 | 方法 | 路径 | 参数 / 返回 |
 |---|---|---|
+| POST | `/api/context` | 同上述读取请求；成功返回 `200`，读取模型缺失或忙返回 `503` |
 | POST | `/api/messages` | `{scope,event}`；返回接收回执 |
 | GET | `/api/job?id=13` | 单个任务回执、输入、结果及错误 |
 | GET | `/api/jobs?scope=群号&after=0&limit=50` | 任务数组；按 `jobId` 递增 |
@@ -495,18 +594,19 @@ research-mvp/var/
 
 ## 测试与验证范围
 
-离线测试只需 Linux 与 Python 3.11+，不需要安装 PyTorch、下载权重、登录 Codex 或调用模型：
+离线测试需要 Linux、Python 3.11+ 与 NumPy，不需要安装 PyTorch/ONNX、下载权重、登录 Codex 或调用模型：
 
 ```sh
+python3 -m pip install "numpy>=1.24,<3"
 cd research-mvp
 PYTHONPATH=.:../router_deploy python3 -m unittest discover -s tests -t . -v
 ```
 
-当前快照包含 **100 项测试**，覆盖持久接收、认证、去重、scope 隔离、慢 Writer 并行接收、TTL、FIFO、Temporary / Final 合同、来源检查、失败恢复、Router 可见输入和发行入口。
+当前快照包含 **192 项测试**，覆盖持久接收、认证、去重、scope 隔离、慢 Writer 并行接收、TTL、FIFO、Temporary / Final 合同、来源检查、失败恢复、Router 可见输入和发行入口。
 
 此源码交付已经通过本机测试、包含空格路径的全新克隆测试，以及 GitHub Actions 的 Python 3.11 / 3.14 验证。最新运行记录见 [GitHub Actions](https://github.com/longzhou23/xtw_memory/actions)。
 
-这些测试使用合成输入及模型替身，证明软件合同和已覆盖的恢复行为。它们不证明真实 Router 语义质量、真实 Writer 本次可用、长期群聊效果或记忆系统的研究净优势。此次整理没有重新执行真实模型端到端验收。权重发布另完成逐文件及压缩包哈希复核，并从两包重新解压、实际 CPU 加载和执行一次合成路由（两个编码分支，零 Writer 调用），验证发布包可加载。
+这些测试使用合成输入及模型替身，证明软件合同和已覆盖的恢复行为。它们不证明真实 Router 语义质量、真实 Writer 本次可用、长期群聊效果或记忆系统的研究净优势。原写入整理未重新执行真实模型端到端验收。读取新增一次有界真实模型合成验证：本地 BGE 三种模式均成功，一次真实适用性调用后返回 964 字符内部上下文（预算 8000）；详见 [读取验证](docs/READ_PATH.md#当前验证2026-10-05)，不属于真实群质量验收。权重发布另完成逐文件及压缩包哈希复核，并从两包重新解压、实际 CPU 加载和执行一次合成路由（两个编码分支，零 Writer 调用），验证发布包可加载。
 
 ## 常见问题
 
@@ -535,11 +635,17 @@ PYTHONPATH=.:../router_deploy python3 -m unittest discover -s tests -t . -v
 ├── scripts/chat-gateway              # 可移植启动包装脚本
 ├── examples/
 │   ├── messages.json                 # 合成消息
-│   └── model_seal.example.json        # 当前模型封存模板
+│   ├── model_seal.example.json        # 当前模型封存模板
+│   └── context.json                   # 当前状态读取请求示例
 ├── research-mvp/
 │   ├── scripts/chat_gateway.py        # 网关 CLI / 本地客户端
 │   ├── research_memory/
 │   │   ├── chat_gateway.py            # 接收队列、后台工作进程、HTTP API
+│   │   ├── context_gateway.py         # 快照、请求预算及内部上下文封装
+│   │   ├── context_recall.py          # 当前状态驱动的读取
+│   │   ├── context_significance.py    # 显式适用性判断
+│   │   ├── associative_recall.py      # 三种召回和关联读取
+│   │   ├── models.py                  # 本地 BGE ONNX
 │   │   ├── routing.py                 # 持久 Router 与生命周期接入
 │   │   ├── episode_runtime.py         # FIFO / Temporary
 │   │   ├── episode_final.py           # Final 整理与来源校验
@@ -555,6 +661,7 @@ PYTHONPATH=.:../router_deploy python3 -m unittest discover -s tests -t . -v
 └── .github/workflows/tests.yml
 ```
 
+- [读取路径合同](docs/READ_PATH.md)
 - [HTTP API 与恢复说明](docs/GATEWAY.md)
 - [CPU Router 模型边界](docs/MODELS.md)
 - [源码提取与验证记录](docs/DELIVERY.md)
