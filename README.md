@@ -506,7 +506,7 @@ PYTHONPATH=.:../router_deploy python3 -m unittest discover -s tests -t . -v
 
 此源码交付已经通过本机测试、包含空格路径的全新克隆测试，以及 GitHub Actions 的 Python 3.11 / 3.14 验证。最新运行记录见 [GitHub Actions](https://github.com/longzhou23/xtw_memory/actions)。
 
-这些测试使用合成输入及模型替身，证明软件合同和已覆盖的恢复行为。它们不证明真实 Router 语义质量、真实 Writer 本次可用、长期群聊效果或记忆系统的研究净优势。此次整理没有重新执行真实模型端到端验收。
+这些测试使用合成输入及模型替身，证明软件合同和已覆盖的恢复行为。它们不证明真实 Router 语义质量、真实 Writer 本次可用、长期群聊效果或记忆系统的研究净优势。此次整理没有重新执行真实模型端到端验收。权重发布另完成逐文件及压缩包哈希复核，并从两包重新解压、实际 CPU 加载和执行一次合成路由（两个编码分支，零 Writer 调用），验证发布包可加载。
 
 ## 常见问题
 
