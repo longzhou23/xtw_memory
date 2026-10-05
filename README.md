@@ -21,7 +21,7 @@
                          Final 记忆 / 实体 / 关联 / 来源
 ```
 
-本分支提取当前开发版本的运行源码、合成示例和测试，便于单独阅读、验证和接入。**它是源码交付；真实运行还需要另外准备封存的 Router 权重，以及已登录的 Writer 环境。** 权重没有公共下载地址，也没有包含在仓库中。
+本分支提取当前开发版本的运行源码、合成示例和测试，便于单独阅读、验证和接入。**当前 Router 权重通过同仓库的 [GitHub Release](https://github.com/longzhou23/xtw_memory/releases/tag/memory-minimal-20261005-router-v02) 提供；真实运行还需要已登录的 Writer 环境。** 仓库和 Release 保持私有，下载需要仓库访问权限。大文件作为 Release 附件分发，不进入源码 Git 历史。
 
 Router 仍有误并、误拆，历史语义验收为 `NOT_ADOPTED`。完整链路可以用于观察内部轻度使用行为，但不能据此宣称话题分类准确、记忆陈述必然正确或已经通过生产验收。
 
@@ -123,9 +123,40 @@ python3 -m venv .venv
 
 不需要激活虚拟环境；启动脚本会自动选择根目录 `.venv/bin/python`。首次安装需联网。依赖或 Python 版本不支持当前平台时，先解决安装问题，再启动网关。
 
-### 3. 准备封存权重
+### 3. 下载并准备当前权重
 
-从现有模型持有者取得两份完整 checkpoint。每个目录都需要以下文件：
+权重入口：[当前网关 Router 权重 Release](https://github.com/longzhou23/xtw_memory/releases/tag/memory-minimal-20261005-router-v02)。需要已登录、具有本仓库读取权限的 GitHub 账户。该发布保留实验身份，版本是当前服务使用的历史稳定双判别器 v0.2，输入版本为 `two-judge-observable-v3`，没有切换到其他训练实验。
+
+Release 包含两个完整模型包、包校验文件和发布清单：
+
+| 附件 | 内容 |
+|---|---|
+| `xtw-router-boundary-v0.2-observable-v3.tar.gz` | 新话题 / 延续判断分支，包含权重、编码器配置和 tokenizer |
+| `xtw-router-ranking-v0.2-observable-v3.tar.gz` | 已有 Episode 排序分支，同样包含完整运行文件 |
+| `SHA256SUMS` | 两个压缩包的 SHA-256 |
+| `release_manifest.json` | 模型身份、输入版本、阈值、附件大小和哈希 |
+
+安装并登录 GitHub CLI 后，从仓库根目录下载：
+
+```sh
+mkdir -p models/downloads
+gh release download memory-minimal-20261005-router-v02 \
+  --repo longzhou23/xtw_memory \
+  --pattern 'xtw-router-*.tar.gz' \
+  --pattern SHA256SUMS \
+  --pattern release_manifest.json \
+  --dir models/downloads
+
+# 两项都应显示 OK；校验失败时不要解压使用
+(cd models/downloads && sha256sum -c SHA256SUMS)
+
+tar -xzf models/downloads/xtw-router-boundary-v0.2-observable-v3.tar.gz -C models
+tar -xzf models/downloads/xtw-router-ranking-v0.2-observable-v3.tar.gz -C models
+```
+
+也可在 Release 网页下载同名附件，放到 `models/downloads/` 后运行校验和解压命令。GitHub 自动生成的 Source code 压缩包只包含源码，**不包含这两份模型**。
+
+解压后结构如下，两个 checkpoint 的文件集合相同：
 
 ```text
 models/
@@ -136,24 +167,37 @@ models/
 │   └── tokenizer/
 │       ├── tokenizer_config.json
 │       └── tokenizer.json
-└── ranking/checkpoint/
-    └── 同样的五个文件
+├── ranking/checkpoint/
+│   └── 同样的五个文件
+└── downloads/
 ```
 
-两份 `model.safetensors` 各约 1.29 GB。`models/` 已被 Git 忽略。复制封存模板：
+两份解压后的 `model.safetensors` 各为 1,287,653,720 字节，完整模型目录合计约 2.64 GB；下载和解压同时保留时还需压缩包空间。`models/` 已被 Git 忽略。
+
+根据仓库提供的封存模板，为本机生成绝对路径配置：
 
 ```sh
-mkdir -p models
-cp examples/model_seal.example.json models/model_seal.json
-```
+python3 - <<'PYTHON'
+import json
+from pathlib import Path
 
-编辑 `models/model_seal.json` 中两项 `checkpoints[*].path`，分别填写 boundary 和 ranking checkpoint 的**绝对路径**。模板已保留当前模型的 SHA-256；只有文件匹配这些哈希的模型包才能使用。不要改写哈希来绕过校验，也不要用其他权重冒充该版本。
-
-```sh
+root = Path.cwd()
+seal = json.loads((root / 'examples/model_seal.example.json').read_text())
+for checkpoint in seal['checkpoints']:
+    path = root / 'models' / checkpoint['branch'] / 'checkpoint'
+    if not path.is_dir():
+        raise SystemExit(f'缺少模型目录：{path}')
+    checkpoint['path'] = str(path.resolve())
+(root / 'models/model_seal.json').write_text(
+    json.dumps(seal, ensure_ascii=False, indent=2) + '\n'
+)
+PYTHON
 export XTW_MEMORY_SEAL="$(pwd)/models/model_seal.json"
 ```
 
-加载器检查 checkpoint 完整性及文件哈希。数据库还绑定封存 JSON 自身的 SHA-256：修改路径、格式或内容后，旧数据库可能因身份不同而被拒绝。此时保留旧库，使用新的试用数据库；项目不提供数据迁移。
+模型包内只包含封存清单列出的五个运行文件，不包含训练数据、聊天原文、用户凭据或本机软链接。模板保留当前模型的逐文件 SHA-256，加载器会再次核对；不要改写哈希绕过校验。
+
+数据库绑定封存 JSON 自身的 SHA-256：修改路径、格式或内容后，旧数据库可能因身份不同而被拒绝。已有网关继续使用原封存文件即可；在新机器或重新定位模型时，保留旧库并使用新的试用数据库，项目不提供迁移。
 
 更多说明见 [CPU Router 模型边界](docs/MODELS.md)。
 
