@@ -102,10 +102,10 @@ Writer 会把相关消息、上下文及来源材料发送给配置的模型。�
 
 ### 1. 获取本分支
 
-仓库为私有，需要具有读取权限的 GitHub 账户。以下命令获取最小实现分支：
+仓库为私有，需要具有读取权限的 GitHub 账户。当前默认分支 `main` 已包含最小实现。以下命令获取主分支：
 
 ```sh
-git clone --single-branch --branch codex/memory-minimal-20261005 \
+git clone --single-branch --branch main \
   https://github.com/longzhou23/xtw_memory.git xtw-memory-minimal
 cd xtw-memory-minimal
 ```
