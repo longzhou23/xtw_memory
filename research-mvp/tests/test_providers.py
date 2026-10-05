@@ -13,7 +13,7 @@ from research_memory.providers import CodexProvider
 
 class CodexProviderTests(unittest.TestCase):
     def setUp(self):
-        folder = tempfile.TemporaryDirectory(prefix="provider-test-", dir="/tmp/opencode")
+        folder = tempfile.TemporaryDirectory(prefix="provider-test-")
         self.addCleanup(folder.cleanup)
         self.root = Path(folder.name)
         self.env = {"XTW_RESEARCH_TMP": str(self.root)}
