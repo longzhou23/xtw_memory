@@ -2,7 +2,7 @@
 
 当前入口是 `xtw_router.frozen.FrozenTwoJudgeCPU`，输入版本 `two-judge-observable-v3`，阈值 0.50。加载 boundary/ranking 两份历史稳定双判别器权重，各约 1.29 GB；网关约需 4–5 GiB 内存。模型未通过独立语义验收，保持实验身份。
 
-源码 Git 历史包含运行源码和合成测试；当前 boundary/ranking 完整 checkpoint 通过私有 [GitHub Release](https://github.com/longzhou23/xtw_memory/releases/tag/memory-minimal-20261005-router-v02) 附件分发。下载、包 SHA-256 校验、解压和本机封存文件生成步骤见 [README](../README.md#3-下载并准备当前权重)。源码克隆本身不包含权重。附件不含训练数据、聊天原文、凭据或本机路径。
+源码 Git 历史包含运行源码和合成测试；当前 boundary/ranking 完整 checkpoint 通过 [GitHub Release](https://github.com/longzhou23/xtw_memory/releases/tag/memory-minimal-20261005-router-v02) 附件分发。下载、包 SHA-256 校验、解压和本机封存文件生成步骤见 [使用与复现指南](USAGE.md#3-下载并准备当前权重)。源码克隆本身不包含权重。附件不含训练数据、聊天原文、凭据或本机路径。
 
 每个 checkpoint 需要 `model.safetensors`、`rl_agent_config.json`、`encoder/config.json`、`tokenizer/tokenizer_config.json` 和 `tokenizer/tokenizer.json`。封存 JSON 的 `checkpoints` 数组需要 boundary/ranking 两项，分别包含 `branch`、checkpoint 的绝对 `path`、`files`（相对文件名映射到 `sha256`）。保留原模型的哈希；复制后只更新路径，不改写权重或冒充新验收。
 
